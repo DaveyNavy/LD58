@@ -8,11 +8,14 @@ public class PlayerStats : MonoBehaviour
     public int flesh = 100;
     public int limbs = 1;
     public Vector3 playerTransform;
+    public PlayerMovement player;
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+
+        player = GetComponent<PlayerMovement>();
     }
 
     private void Update()

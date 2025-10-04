@@ -12,7 +12,7 @@ public class Damagable : MonoBehaviour
     [SerializeField] private int _maxHealth;
     [SerializeField] private int _curHealth;
     [SerializeField] public bool IsPlayer;
-    private Rigidbody2D _rb;
+    protected Rigidbody2D _rb;
 
     public virtual bool TakeDamage(int amount)
     {
@@ -40,15 +40,20 @@ public class Damagable : MonoBehaviour
     [SerializeField] private int _contactDamageGiveKB;
     [SerializeField] private int _contactDamageTakeKB;
 
+    public void ApplyKnockback(Vector2 kb)
+    {
+        _rb.AddForce(kb);
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         // Find player to damage:
         if (_contactDamage > 0 && collision.gameObject.TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             player.TakeDamage(_contactDamage);
-            Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
-            player.Rigidbody.AddForce(knockbackDir * _contactDamageGiveKB);
-            _rb.AddForce(-knockbackDir * _contactDamageTakeKB);
+            Vector2 knockback = (collision.transform.position - transform.position).normalized;
+            player.ApplyKnockback(knockback * _contactDamageGiveKB);
+            this.ApplyKnockback(-knockback * _contactDamageTakeKB);
         }
     }
 

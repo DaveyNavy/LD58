@@ -152,3 +152,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Attack
   Lifetime: 10
   Damage: 30
+  Knockback: 800

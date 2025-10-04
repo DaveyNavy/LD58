@@ -23,7 +23,10 @@ public class Enemy : Damagable
     void MoveTowardPlayer()
     {
         Vector2 direction = (PlayerStats.Instance.playerTransform - transform.position).normalized;
-        transform.position += (Vector3) direction * speed * Time.deltaTime;
+        Vector2 desiredVelocity = direction * speed;
+        Vector2 currentVelocity = _rb.linearVelocity;
+        Vector2 velocityChange = desiredVelocity - currentVelocity;
+        _rb.AddForce(velocityChange, ForceMode2D.Force);
     }
 
     bool IsSpriteOnScreen()
