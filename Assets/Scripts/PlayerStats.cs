@@ -7,11 +7,17 @@ public class PlayerStats : MonoBehaviour
 
     public int flesh = 100;
     public int limbs = 1;
+    public Vector3 playerTransform;
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+    }
+
+    private void Update()
+    {
+        playerTransform = transform.position;
     }
 
     public int GetCurrentLimbCost()
