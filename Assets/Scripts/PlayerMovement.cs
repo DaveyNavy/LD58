@@ -9,7 +9,7 @@ public class PlayerMovement : Damagable
     [NonSerialized] public Rigidbody2D Rigidbody;
     private Camera _mainCamera;
 
-    private void Awake()
+    protected override void Awake()
     {
         Rigidbody = GetComponent<Rigidbody2D>();
         _mainCamera = Camera.main;

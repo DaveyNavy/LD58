@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class Damagable : MonoBehaviour
 {
-    private void Awake()
+    protected virtual void Awake()
     {
         _curHealth = _maxHealth;
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     #region Health
-    [SerializeField] private int _maxHealth = 100;
+    [SerializeField] private int _maxHealth;
     [SerializeField] private int _curHealth;
+    private Rigidbody2D _rb;
 
     public virtual bool TakeDamage(int amount)
     {
         _curHealth = Mathf.Max(_curHealth - amount, 0);
         bool isAlive = _curHealth > 0;
-        if (isAlive)
+        if (!isAlive)
             OnDeath();
         return isAlive;
     }
@@ -34,7 +36,8 @@ public class Damagable : MonoBehaviour
 
     #region Contact
     [SerializeField] private int _contactDamage;
-    [SerializeField] private int _contactDamageKB;
+    [SerializeField] private int _contactDamageGiveKB;
+    [SerializeField] private int _contactDamageTakeKB;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -43,7 +46,8 @@ public class Damagable : MonoBehaviour
         {
             player.TakeDamage(_contactDamage);
             Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
-            player.Rigidbody.AddForce(knockbackDir * _contactDamageKB);
+            player.Rigidbody.AddForce(knockbackDir * _contactDamageGiveKB);
+            _rb.AddForce(-knockbackDir * _contactDamageTakeKB);
         }
     }
 
