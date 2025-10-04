@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Damagable
 {
     public float Speed = 5f;
     private Vector2 _moveInput;
-    private Rigidbody2D _rb;
+    [NonSerialized] public Rigidbody2D Rigidbody;
     private Camera _mainCamera;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        Rigidbody = GetComponent<Rigidbody2D>();
         _mainCamera = Camera.main;
     }
 
@@ -21,8 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 velocity = _moveInput * Speed;
-        _rb.linearVelocity = velocity;
+        Vector2 desiredVelocity = _moveInput * Speed;
+        Vector2 currentVelocity = Rigidbody.linearVelocity;
+        Vector2 velocityChange = desiredVelocity - currentVelocity;
+        Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
     }
 
     private void LateUpdate()
@@ -34,5 +37,11 @@ public class PlayerMovement : MonoBehaviour
             targetPosition,
             0.05f // Smooth factor, adjust as needed
         );
+    }
+
+    public override void OnDeath()
+    {
+        Debug.Log("Player Died!");
+        Destroy(gameObject);
     }
 }
