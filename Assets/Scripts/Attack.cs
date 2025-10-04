@@ -22,8 +22,11 @@ public class Attack : MonoBehaviour
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null && !damagable.IsPlayer)
         {
-            Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
-            damagable.ApplyKnockback(knockback * Knockback);
+            if (PlayerStats.Instance.limbs > 1)
+            {
+                Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
+                damagable.ApplyKnockback(knockback * Knockback);
+            }
             damagable.TakeDamage(Damage);
         }
     }

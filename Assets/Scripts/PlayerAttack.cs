@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 public class PlayerAttack : MonoBehaviour
@@ -11,9 +10,12 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject AttackPoundPrefab;
     [SerializeField] private GameObject AttackSpinPrefab;
     private int _attackTimer;
+    private int _attackAnimTimer;
     private int _attackPoundTimer;
     private int _attackSpinTimer;
     private PlayerMovement _player;
+    private float _speed;
+    private Vector2 _facing;
 
     private void Awake()
     {
@@ -24,6 +26,13 @@ public class PlayerAttack : MonoBehaviour
         _attackTimer = Mathf.Max(0, _attackTimer - 1);
         _attackPoundTimer = Mathf.Max(0, _attackPoundTimer - 1);
         _attackSpinTimer = Mathf.Max(0, _attackSpinTimer - 1);
+        _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);
+
+        if (_attackAnimTimer == 1)
+        {
+            Instantiate(AttackPrefab, GetSpawnPos(_facing), GetSpawnRot(_facing));
+            PlayerStats.Instance.player.Speed = _speed;
+        }
     }
 
     public void OnAttack()
@@ -53,7 +62,10 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
-        Instantiate(AttackPrefab, GetSpawnPos(), GetSpawnRot());
+        _attackAnimTimer = 35;
+        _facing = _player.Facing;
+        _speed = PlayerStats.Instance.player.Speed;
+        PlayerStats.Instance.player.Speed = 0;
     }
     private void AttackPound()
     {
@@ -68,9 +80,8 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log("Player Attack Spin!");
     }
 
-    private Vector2 GetSpawnPos()
+    private Vector2 GetSpawnPos(Vector2 facing)
     {
-        Vector2 facing = _player.Facing;
         float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
         angle = Mathf.Round(angle / 45f) * 45f;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
@@ -78,9 +89,8 @@ public class PlayerAttack : MonoBehaviour
         float distance = 1f; // Distance in front of player
         return transform.position + spawnOffset * distance;
     }
-    private Quaternion GetSpawnRot()
+    private Quaternion GetSpawnRot(Vector2 facing)
     {
-        Vector2 facing = _player.Facing;
         float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
         angle = Mathf.Round(angle / 45f) * 45f;
         return Quaternion.Euler(0, 0, angle);

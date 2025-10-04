@@ -9,12 +9,14 @@ public class PlayerMovement : Damagable
     [NonSerialized] public Rigidbody2D Rigidbody;
     private Camera _mainCamera;
     public Vector2 Facing = Vector2.right;
+    public PlayerAttack Attack;
 
     protected override void Awake()
     {
         base.Awake();
         //
         Rigidbody = GetComponent<Rigidbody2D>();
+        Attack = GetComponent<PlayerAttack>();
         _mainCamera = Camera.main;
     }
 
