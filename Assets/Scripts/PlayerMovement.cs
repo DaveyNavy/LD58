@@ -12,7 +12,7 @@ public class PlayerMovement : Damagable
     protected override void Awake()
     {
         base.Awake();
-
+        //
         Rigidbody = GetComponent<Rigidbody2D>();
         _mainCamera = Camera.main;
     }

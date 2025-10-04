@@ -624,8 +624,8 @@ MonoBehaviour:
   _maxHealth: 100
   _curHealth: 0
   _contactDamage: 20
-  _contactDamageGiveKB: 500
-  _contactDamageTakeKB: 500
+  _contactDamageGiveKB: 100
+  _contactDamageTakeKB: 300
 --- !u!4 &1671652913
 Transform:
   m_ObjectHideFlags: 0
