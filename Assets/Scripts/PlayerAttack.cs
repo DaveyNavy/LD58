@@ -74,7 +74,7 @@ public class PlayerAttack : MonoBehaviour
         float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
         angle = Mathf.Round(angle / 45f) * 45f;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        Vector3 spawnOffset = Quaternion.Euler(0, 0, angle) * Vector3.right * 2f;
+        Vector3 spawnOffset = Quaternion.Euler(0, 0, angle) * Vector3.right * 1.5f;
         float distance = 1f; // Distance in front of player
         return transform.position + spawnOffset * distance;
     }
