@@ -11,6 +11,7 @@ public class Damagable : MonoBehaviour
     #region Health
     [SerializeField] private int _maxHealth;
     [SerializeField] private int _curHealth;
+    [SerializeField] public bool IsPlayer;
     private Rigidbody2D _rb;
 
     public virtual bool TakeDamage(int amount)

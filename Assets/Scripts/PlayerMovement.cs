@@ -5,9 +5,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : Damagable
 {
     public float Speed = 5f;
-    private Vector2 _moveInput;
+    public Vector2 MoveInput;
     [NonSerialized] public Rigidbody2D Rigidbody;
     private Camera _mainCamera;
+    public Vector2 Facing = Vector2.right;
 
     protected override void Awake()
     {
@@ -19,12 +20,14 @@ public class PlayerMovement : Damagable
 
     public void OnMove(InputValue value)
     {
-        _moveInput = value.Get<Vector2>();
+        MoveInput = value.Get<Vector2>();
+        if (MoveInput != Vector2.zero)
+            Facing = MoveInput.normalized;
     }
 
     private void FixedUpdate()
     {
-        Vector2 desiredVelocity = _moveInput * Speed;
+        Vector2 desiredVelocity = MoveInput * Speed;
         Vector2 currentVelocity = Rigidbody.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
