@@ -396,6 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _maxHealth: 100
   _curHealth: 0
+  IsPlayer: 1
   _contactDamage: 0
   _contactDamageGiveKB: 0
   _contactDamageTakeKB: 0
@@ -479,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   flesh: 100
   limbs: 1
+  playerTransform: {x: 0, y: 0, z: 0}
 --- !u!114 &423648734
 MonoBehaviour:
   m_ObjectHideFlags: 0
