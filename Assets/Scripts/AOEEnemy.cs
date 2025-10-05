@@ -6,6 +6,9 @@ public class AOEEnemy : Damagable
     private Renderer spriteRenderer;
     private Camera mainCamera;
     public int speed;
+    private Animator animator;
+    private int _attackAnimTimer;
+
 
     [SerializeField] private int aoeCooldown = 200;
     [SerializeField] private int aoeMeteors = 5;
@@ -15,14 +18,16 @@ public class AOEEnemy : Damagable
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
     }
 
     void Update()
     {
-        if (IsSpriteOnScreen())
+        if (IsSpriteOnScreen() && _attackAnimTimer == 0)
         {
+            animator.SetBool("IsAttacking", false);
             MoveTowardPlayer();
         }
     }
@@ -30,12 +35,16 @@ public class AOEEnemy : Damagable
     private void FixedUpdate()
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
+        _attackAnimTimer = Mathf.Max(_attackAnimTimer - 1, 0);
         if (aoeTimer == 0 && inRange)
         {
             aoeTimer = aoeCooldown;
+            _attackAnimTimer = 100;
         }
         if (aoeTimer >= aoeCooldown - aoeMeteors * 4 && aoeTimer % 4 == 0)
         {
+            animator.SetBool("IsAttacking", true);
+
             Instantiate(meteorPrefab, PlayerStats.Instance.playerTransform + (Vector3)(Random.insideUnitCircle * 3f), Quaternion.identity);
         }
     }
@@ -62,6 +71,13 @@ public class AOEEnemy : Damagable
         Vector2 currentVelocity = _rb.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         _rb.AddForce(velocityChange, ForceMode2D.Force);
+
+        if (desiredVelocity.x != 0f)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (desiredVelocity.x < 0 ? 1 : -1);
+            transform.localScale = scale;
+        }
     }
 
     bool IsSpriteOnScreen()
