@@ -20,7 +20,6 @@ public class BossEnemy : Damagable
 
     private int originalSpeed;
 
-    private int _attackAnimTimer = 500;
 
 
 
@@ -84,14 +83,11 @@ public class BossEnemy : Damagable
     {
         Coroutine = StartCoroutine(ChargeAttack());
 
-        Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
-
         aoeTimer = aoeCooldown;
     }
 
     private IEnumerator ChargeAttack()
     {
-        _attackAnimTimer = 150;
         _rb.linearVelocity = Vector2.zero;
 
         speed = 0;
@@ -110,7 +106,10 @@ public class BossEnemy : Damagable
         }
         lineRenderer.enabled = false;
 
-        speed = originalSpeed * 15;
+        Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
+
+
+        speed = originalSpeed * 60;
         Vector2 desiredVelocity = directionToPlayer * speed;
         Vector2 currentVelocity = _rb.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;

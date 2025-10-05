@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     private void Awake()
     {
         _lifetimeTimer = Lifetime;
+        transform.localScale = transform.localScale * PlayerStats.Instance.player.Attack.GetLimbMultiplier();
     }
     private void FixedUpdate()
     {
@@ -27,7 +28,6 @@ public class Attack : MonoBehaviour
                 Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
                 damagable.ApplyKnockback(knockback * Knockback);
             }
-            Debug.Log(Damage);
             damagable.TakeDamage((int)(Damage * PlayerStats.Instance.player.Attack.GetLimbMultiplier()));
         }
     }
