@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] int Lifetime;
     [SerializeField] int Damage;
@@ -20,15 +20,9 @@ public class Attack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var damagable = collision.GetComponent<Damagable>();
-        if (damagable != null && !damagable.IsPlayer)
+        if (damagable != null && damagable.IsPlayer)
         {
-            if (PlayerStats.Instance.limbs > 1 && !damagable.knockbackImmune)
-            {
-                Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
-                damagable.ApplyKnockback(knockback * Knockback);
-            }
-            Debug.Log(Damage);
-            damagable.TakeDamage((int)(Damage * PlayerStats.Instance.player.Attack.GetLimbMultiplier()));
+            damagable.TakeDamage(Damage);
         }
     }
 }

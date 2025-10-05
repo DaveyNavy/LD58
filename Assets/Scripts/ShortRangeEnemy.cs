@@ -1,0 +1,80 @@
+using System.Collections;
+using UnityEngine;
+
+public class ShortRangeEnemy : Enemy
+{
+    public GameObject squarePrefab;
+    public GameObject windupPrefab;
+
+    public float spawnDistance = 2f;
+
+    [SerializeField] private int AttackCD;
+    private int _attackTimer;
+    private int _attackAnimTimer;
+
+    private int _attackRange = 3;
+
+    private Rigidbody2D rb;
+
+    private int originalSpeed;
+
+    new private void Awake()
+    {
+        base.Awake();
+        originalSpeed = speed;
+    }
+
+    new private void Update()
+    {
+        base.Update();
+        rb = GetComponent<Rigidbody2D>();
+        if (_attackAnimTimer <= 0)
+        {
+            speed = originalSpeed;
+        }
+
+        Attack();
+    }
+
+    private void FixedUpdate()
+    {
+        _attackTimer = Mathf.Max(0, _attackTimer - 1);
+        _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);
+    }
+
+    public void Attack()
+    {
+        if (_attackTimer > 0) return;
+        _attackTimer = AttackCD;
+
+        if (Vector3.Distance(transform.position, PlayerStats.Instance.playerTransform) > _attackRange)
+        {
+            return;
+        }
+
+        StartCoroutine(SpawnWindupThenAttack());
+    }
+
+    private IEnumerator SpawnWindupThenAttack()
+    {
+        Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
+
+        Vector3 spawnPos = transform.position + directionToPlayer * spawnDistance;
+
+        speed = 0;
+        _attackAnimTimer = 50;
+
+        if (StunTimer > 0.1f) yield break;
+
+        Instantiate(windupPrefab, spawnPos, Quaternion.identity);
+
+        for (int i = 0; i < 50; i++)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+        if (StunTimer > 0.1f) yield break;
+
+        Instantiate(squarePrefab, spawnPos, Quaternion.identity);
+    }
+}

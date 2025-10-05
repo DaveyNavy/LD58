@@ -117,9 +117,8 @@ public class PlayerAttack : MonoBehaviour
         int limb = PlayerStats.Instance.limbs;
         if (limb == 1) return 0.6f;
         if (limb == 2) return 0.9f;
-        if (limb == 3) return 1.1f;
         if (limb == 3) return 1.25f;
-        if (limb == 3) return 1.5f;
+        if (limb == 4) return 1.5f;
         return 0f;
     }
 }
