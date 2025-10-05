@@ -290,9 +290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1239623a12673ea4993ae600b9025727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  flesh: {fileID: 0}
   _maxHealth: 100
   _curHealth: 0
   IsPlayer: 1
+  _fleshDrops: 0
   _contactDamage: 0
   _contactDamageGiveKB: 0
   _contactDamageTakeKB: 0
@@ -301,6 +303,8 @@ MonoBehaviour:
   MoveInput: {x: 0, y: 0}
   Facing: {x: 1, y: 0}
   Attack: {fileID: 0}
+  key: 304
+  holdTime: 1
 --- !u!114 &3118759746719257174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +417,7 @@ MonoBehaviour:
   AttackPrefab: {fileID: 232801986427644394, guid: bf7626440d2828244a4e7b01aef118aa, type: 3}
   AttackPoundPrefab: {fileID: 232801986427644394, guid: 830a749d050a2494ea65d4fade2755c5, type: 3}
   AttackSpinPrefab: {fileID: 232801986427644394, guid: ebd7f0c9ed20cb94894f7bc30033b153, type: 3}
-  AttackDashPrefab: {fileID: 0}
+  AttackDashPrefab: {fileID: 232801986427644394, guid: 2cceeb63b584a924d949423926e69870, type: 3}
 --- !u!114 &4275241892213043901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +430,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4add3c1462b59f429a62d01ae76dcf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  fleshText: {fileID: 0}
   flesh: 100
   limbs: 4
   playerTransform: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
+  limbHealth: 100
+  DaddyFlesh: 75
+  daddyStatusText: {fileID: 0}

@@ -37,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (_attackAnimTimer == 1)
         {
-            Instantiate(AttackPrefab, GetSpawnPos(_facing), GetSpawnRot(_facing));
+            Instantiate(AttackPrefab, GetSpawnPos(_facing, 1.5f), GetSpawnRot(_facing));
             PlayerStats.Instance.player.Speed = _speed;
         }
         if (_attackPoundAnimTimer == 1)
@@ -125,18 +125,17 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log("Player Attack Dash!");
         PlayerStats.Instance.limbDecay();
 
-        //Instantiate(AttackDashPrefab, transform.position, Quaternion.identity);
+        Instantiate(AttackDashPrefab, GetSpawnPos(_player.Facing, 2f), GetSpawnRot(_player.Facing));
         _player.ApplyKnockback(_player.Facing * 500f);
     }
 
-    private Vector2 GetSpawnPos(Vector2 facing)
+    private Vector2 GetSpawnPos(Vector2 facing, float distance)
     {
         float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
         angle = Mathf.Round(angle / 45f) * 45f;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        Vector3 spawnOffset = Quaternion.Euler(0, 0, angle) * Vector3.right * 1.5f;
-        float distance = 1f; // Distance in front of player
-        return transform.position + spawnOffset * distance;
+        Vector3 spawnOffset = Quaternion.Euler(0, 0, angle) * Vector3.right * distance * GetLimbMultiplier();
+        return transform.position + spawnOffset;
     }
     private Quaternion GetSpawnRot(Vector2 facing)
     {

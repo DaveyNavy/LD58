@@ -39,6 +39,7 @@ public class BigDaddy : Damagable
         amount = Mathf.Min(amount, PlayerStats.Instance.flesh);
         PlayerStats.Instance.UpdateFlesh(-amount);
         PlayerStats.Instance.DaddyFlesh += amount;
+        PlayerStats.Instance.player.Heal(amount);
         return true;
     }
 }
