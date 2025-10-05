@@ -4,14 +4,12 @@ public class Enemy : Damagable
 {
     private Renderer spriteRenderer;
     private Camera mainCamera;
-    private Animator animator;
     public int speed;
 
     protected virtual void Start()
     {
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
-        animator = GetComponent<Animator>();
     }
 
     protected virtual void Update()
