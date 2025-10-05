@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     public Vector3 playerTransform;
     public PlayerMovement player;
 
+    public int limbHealth = 100;
     private void Awake()
     {
         if (Instance == null)
@@ -19,7 +20,6 @@ public class PlayerStats : MonoBehaviour
 
         player = GetComponent<PlayerMovement>();
     }
-
 
     private void Update()
     {
@@ -45,5 +45,19 @@ public class PlayerStats : MonoBehaviour
     {
         flesh += change;
         fleshText.text = "Flesh: " + flesh;
+    }
+
+    public void limbDecay()
+    {
+        limbHealth--;
+        if (limbHealth <= 0)
+        {
+            limbHealth = 100;
+            limbs--;
+            if (limbs <= 0)
+            {
+                Debug.Log("Player Died!");
+            }
+        }
     }
 }

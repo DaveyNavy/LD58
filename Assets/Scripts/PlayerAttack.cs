@@ -81,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
+        PlayerStats.Instance.limbDecay();
         _facing = _player.Facing;
         if (PlayerStats.Instance.limbs <= 1)
         {
@@ -104,6 +105,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackPoundTimer > 0) return;
         _attackPoundTimer = AttackPoundCD;
         Debug.Log("Player Attack Pound!");
+        PlayerStats.Instance.limbDecay();
         PlayerStats.Instance.player.Speed = 0;
         _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 5 : 20;
     }
@@ -112,6 +114,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackSpinTimer > 0) return;
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
+        PlayerStats.Instance.limbDecay();
         Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
     }
 
@@ -120,6 +123,8 @@ public class PlayerAttack : MonoBehaviour
         if (_attackDashTimer > 0) return;
         _attackDashTimer = AttackDashCD;
         Debug.Log("Player Attack Dash!");
+        PlayerStats.Instance.limbDecay();
+
         //Instantiate(AttackDashPrefab, transform.position, Quaternion.identity);
         _player.ApplyKnockback(_player.Facing * 500f);
     }

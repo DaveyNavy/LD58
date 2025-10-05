@@ -4,16 +4,20 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour
 {
 
-    public Slider slider;
+    public Slider healthSlider;
+    public Slider limbHealthSlider;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        slider.maxValue = PlayerStats.Instance.player._maxHealth;
+        healthSlider.maxValue = PlayerStats.Instance.player._maxHealth;
+        limbHealthSlider.maxValue = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.value = PlayerStats.Instance.player._curHealth;
+        healthSlider.value = PlayerStats.Instance.player._curHealth;
+        limbHealthSlider.value = PlayerStats.Instance.limbHealth;
     }
 }
