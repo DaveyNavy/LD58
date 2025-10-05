@@ -79,6 +79,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackSpinTimer > 0) return;
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
+        Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
     }
 
     private Vector2 GetSpawnPos(Vector2 facing)
