@@ -409,9 +409,11 @@ MonoBehaviour:
   AttackCD: 50
   AttackPoundCD: 50
   AttackSpinCD: 100
+  AttackDashCD: 25
   AttackPrefab: {fileID: 232801986427644394, guid: bf7626440d2828244a4e7b01aef118aa, type: 3}
   AttackPoundPrefab: {fileID: 232801986427644394, guid: 830a749d050a2494ea65d4fade2755c5, type: 3}
   AttackSpinPrefab: {fileID: 232801986427644394, guid: ebd7f0c9ed20cb94894f7bc30033b153, type: 3}
+  AttackDashPrefab: {fileID: 0}
 --- !u!114 &4275241892213043901
 MonoBehaviour:
   m_ObjectHideFlags: 0

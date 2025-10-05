@@ -11,6 +11,7 @@ public class AttackPound : MonoBehaviour
     private void Awake()
     {
         _lifetimeTimer = Lifetime;
+        transform.localScale = transform.localScale * PlayerStats.Instance.player.Attack.GetLimbMultiplier();
     }
     private void FixedUpdate()
     {

@@ -6,14 +6,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private int AttackCD;
     [SerializeField] private int AttackPoundCD;
     [SerializeField] private int AttackSpinCD;
+    [SerializeField] private int AttackDashCD;
     [SerializeField] private GameObject AttackPrefab;
     [SerializeField] private GameObject AttackPoundPrefab;
     [SerializeField] private GameObject AttackSpinPrefab;
+    [SerializeField] private GameObject AttackDashPrefab;
     private int _attackTimer;
     private int _attackAnimTimer;
     private int _attackPoundTimer;
     private int _attackPoundAnimTimer;
     private int _attackSpinTimer;
+    private int _attackDashTimer;
     private PlayerMovement _player;
     private float _speed;
     private Vector2 _facing;
@@ -30,18 +33,16 @@ public class PlayerAttack : MonoBehaviour
         _attackSpinTimer = Mathf.Max(0, _attackSpinTimer - 1);
         _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);
         _attackPoundAnimTimer = Mathf.Max(0, _attackPoundAnimTimer - 1);
+        _attackDashTimer = Mathf.Max(0, _attackDashTimer - 1);
 
         if (_attackAnimTimer == 1)
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing), GetSpawnRot(_facing));
             PlayerStats.Instance.player.Speed = _speed;
         }
-        if (_attackPoundAnimTimer == 1 + 40)
-        {
-            Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
-        }
         if (_attackPoundAnimTimer == 1)
         {
+            Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
             PlayerStats.Instance.player.Speed = _speed;
         }
     }
@@ -56,16 +57,23 @@ public class PlayerAttack : MonoBehaviour
     public void OnAttackPound()
     {
         int limb = PlayerStats.Instance.limbs;
-        if (limb < 3) return;
+        if (limb < 2) return;
 
         AttackPound();
     }
     public void OnAttackSpin()
     {
         int limb = PlayerStats.Instance.limbs;
-        if (limb < 4) return;
+        if (limb < 3) return;
 
         AttackSpin();
+    }
+    public void OnAttackDash()
+    {
+        int limb = PlayerStats.Instance.limbs;
+        if (limb < 4) return;
+
+        AttackDash();
     }
 
     private void Attack()
@@ -78,7 +86,18 @@ public class PlayerAttack : MonoBehaviour
         {
             PlayerStats.Instance.player.Speed = 0;
         }
-        _attackAnimTimer = (PlayerStats.Instance.limbs > 1) ? 25 : 35;
+        if (PlayerStats.Instance.limbs == 1)
+        {
+            _attackAnimTimer = 35;
+        }
+        else if (PlayerStats.Instance.limbs == 2)
+        {
+            _attackAnimTimer = 25;
+        }
+        else if (PlayerStats.Instance.limbs >= 3)
+        {
+            _attackAnimTimer = 5;
+        }
     }
     private void AttackPound()
     {
@@ -86,7 +105,7 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundTimer = AttackPoundCD;
         Debug.Log("Player Attack Pound!");
         PlayerStats.Instance.player.Speed = 0;
-        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 3) ? 5 + 40 : 20 + 40;
+        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 5 : 20;
     }
     private void AttackSpin()
     {
@@ -94,6 +113,15 @@ public class PlayerAttack : MonoBehaviour
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
         Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
+    }
+
+    private void AttackDash()
+    {
+        if (_attackDashTimer > 0) return;
+        _attackDashTimer = AttackDashCD;
+        Debug.Log("Player Attack Dash!");
+        //Instantiate(AttackDashPrefab, transform.position, Quaternion.identity);
+        _player.ApplyKnockback(_player.Facing * 500f);
     }
 
     private Vector2 GetSpawnPos(Vector2 facing)

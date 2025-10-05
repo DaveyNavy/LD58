@@ -20,7 +20,6 @@ public class BossEnemy : Damagable
 
     private int originalSpeed;
 
-    private int _attackAnimTimer = 500;
 
 
 
@@ -91,7 +90,6 @@ public class BossEnemy : Damagable
 
     private IEnumerator ChargeAttack()
     {
-        _attackAnimTimer = 150;
         _rb.linearVelocity = Vector2.zero;
 
         speed = 0;
