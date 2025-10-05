@@ -12,6 +12,7 @@ public class PlayerAttack : MonoBehaviour
     private int _attackTimer;
     private int _attackAnimTimer;
     private int _attackPoundTimer;
+    private int _attackPoundAnimTimer;
     private int _attackSpinTimer;
     private PlayerMovement _player;
     private float _speed;
@@ -20,6 +21,7 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         _player = GetComponent<PlayerMovement>();
+        _speed = PlayerStats.Instance.player.Speed;
     }
     private void FixedUpdate()
     {
@@ -27,10 +29,19 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundTimer = Mathf.Max(0, _attackPoundTimer - 1);
         _attackSpinTimer = Mathf.Max(0, _attackSpinTimer - 1);
         _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);
+        _attackPoundAnimTimer = Mathf.Max(0, _attackPoundAnimTimer - 1);
 
         if (_attackAnimTimer == 1)
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing), GetSpawnRot(_facing));
+            PlayerStats.Instance.player.Speed = _speed;
+        }
+        if (_attackPoundAnimTimer == 1 + 40)
+        {
+            Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
+        }
+        if (_attackPoundAnimTimer == 1)
+        {
             PlayerStats.Instance.player.Speed = _speed;
         }
     }
@@ -45,14 +56,14 @@ public class PlayerAttack : MonoBehaviour
     public void OnAttackPound()
     {
         int limb = PlayerStats.Instance.limbs;
-        if (limb < 2) return;
+        if (limb < 3) return;
 
         AttackPound();
     }
     public void OnAttackSpin()
     {
         int limb = PlayerStats.Instance.limbs;
-        if (limb < 3) return;
+        if (limb < 4) return;
 
         AttackSpin();
     }
@@ -63,16 +74,19 @@ public class PlayerAttack : MonoBehaviour
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
         _facing = _player.Facing;
-        _speed = PlayerStats.Instance.player.Speed;
-        PlayerStats.Instance.player.Speed = 0;
-        _attackAnimTimer = (PlayerStats.Instance.limbs > 1) ? 2 : 35;
+        if (PlayerStats.Instance.limbs <= 1)
+        {
+            PlayerStats.Instance.player.Speed = 0;
+        }
+        _attackAnimTimer = (PlayerStats.Instance.limbs > 1) ? 25 : 35;
     }
     private void AttackPound()
     {
         if (_attackPoundTimer > 0) return;
         _attackPoundTimer = AttackPoundCD;
         Debug.Log("Player Attack Pound!");
-        Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
+        PlayerStats.Instance.player.Speed = 0;
+        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 3) ? 5 + 40 : 20 + 40;
     }
     private void AttackSpin()
     {
@@ -96,5 +110,15 @@ public class PlayerAttack : MonoBehaviour
         float angle = Mathf.Atan2(facing.y, facing.x) * Mathf.Rad2Deg;
         angle = Mathf.Round(angle / 45f) * 45f;
         return Quaternion.Euler(0, 0, angle);
+    }
+
+    private float GetLimbMultiplier()
+    {
+        int limb = PlayerStats.Instance.limbs;
+        if (limb == 1) return 0.5f;
+        if (limb == 2) return 0.75f;
+        if (limb == 3) return 1f;
+        if (limb == 3) return 1.25f;
+        return 0f;
     }
 }
