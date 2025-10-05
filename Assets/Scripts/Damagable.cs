@@ -58,4 +58,6 @@ public class Damagable : MonoBehaviour
     }
 
     #endregion Contact
+
+    public bool knockbackImmune;
 }

@@ -6,13 +6,13 @@ public class Enemy : Damagable
     private Camera mainCamera;
     public int speed;
 
-    void Start()
+    protected void Start()
     {
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
     }
 
-    void Update()
+    protected void Update()
     {
         if (IsSpriteOnScreen())
         {
