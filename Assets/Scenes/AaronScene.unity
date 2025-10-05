@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 682897289703250987, guid: aa85992e85658d34eaf5b2eaec32cda6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5833962425253048866, guid: aa85992e85658d34eaf5b2eaec32cda6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277708508112975459, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706345153096334199, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277708508112975459, guid: 93340942a689f5048ac0700373de84c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706345153096334199, guid: 93340942a689f5048ac0700373de84c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -581,7 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277708508112975459, guid: 4c9e3166a6bba39448d64bf5bdbc1e9f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706345153096334199, guid: 4c9e3166a6bba39448d64bf5bdbc1e9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -682,7 +682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169875118496572530, guid: 4c19ef12c423a7e4b802d057dd4613e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -743,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275241892213043901, guid: 6d81791994fd9cf4790cb59c45ddc6ca, type: 3}
       propertyPath: limbs
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8788396984401031892, guid: 6d81791994fd9cf4790cb59c45ddc6ca, type: 3}
       propertyPath: m_Name
