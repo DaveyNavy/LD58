@@ -27,6 +27,7 @@ public class Meteor : MonoBehaviour
         if (_lifetimeTimer == 1) {
             blast.Play();
             transform.localScale = Vector3.zero;
+            GetComponent<CircleCollider2D>().enabled = false;
             Destroy(gameObject, 5f);
         }
     }
