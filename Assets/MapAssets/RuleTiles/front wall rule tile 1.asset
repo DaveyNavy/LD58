@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6f3fbb560bd6041a202ea918fa4f23, type: 3}
   m_Name: front wall rule tile 1
   m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.IsometricRuleTile
-  m_DefaultSprite: {fileID: 4137030636359802646, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+  m_DefaultSprite: {fileID: -2388044296992473607, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 5
     m_Sprites:
-    - {fileID: -1816844258848033757, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: -4586610840507886905, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 0
     m_Sprites:
-    - {fileID: 4137030636359802646, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: -2388044296992473607, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
-    - {fileID: -2600922447529477653, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: 7592100370109628915, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 2
     m_Sprites:
-    - {fileID: 3115351446846652114, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: -1122134598783477229, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -77,7 +77,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 3
     m_Sprites:
-    - {fileID: -2316507608578306244, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: -27556747759753811, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
     m_RuleTransform: 0
   - m_Id: 4
     m_Sprites:
-    - {fileID: 3633969210475706108, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
+    - {fileID: -5217804919698372829, guid: f137772ff7b0abc4784acfd096945a16, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
