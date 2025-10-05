@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cb4d352b211e54db5fc057f7826adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AOEEnemy
-  _maxHealth: 100
+  _maxHealth: 50
   _curHealth: 0
   IsPlayer: 0
   _contactDamage: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   _contactDamageTakeKB: 0
   strafeDistance: 4
   speed: 2
-  aoeCooldown: 200
+  aoeCooldown: 300
   aoeMeteors: 5
   meteorPrefab: {fileID: 7051049178766389890, guid: e638d72efd88b664c80491023966b264, type: 3}
   StunTimer: 0
