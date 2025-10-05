@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Damagable : MonoBehaviour
 {
+    public GameObject flesh;
     protected virtual void Awake()
     {
         _curHealth = _maxHealth;
@@ -12,6 +13,7 @@ public class Damagable : MonoBehaviour
     [SerializeField] private int _maxHealth;
     [SerializeField] private int _curHealth;
     [SerializeField] public bool IsPlayer;
+    [SerializeField] private int _fleshDrops;
     protected Rigidbody2D _rb;
 
     public virtual bool TakeDamage(int amount)
@@ -29,7 +31,13 @@ public class Damagable : MonoBehaviour
 
     public virtual void OnDeath()
     {
-        Debug.Log("Damagable died!");
+        if (!IsPlayer)
+        {
+            for (int i = 0; i < _fleshDrops; i++)
+            {
+                Instantiate(flesh, transform.position, Quaternion.identity);
+            }
+        }
         Destroy(gameObject);
     }
 
