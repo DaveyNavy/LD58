@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttackPound : MonoBehaviour
 {
     [SerializeField] int Lifetime;
-    [SerializeField] int Damage;
+    [SerializeField] public int Damage;
     [SerializeField] int Knockback;
     [SerializeField] float StunDuration;
     private int _lifetimeTimer;
@@ -23,7 +23,7 @@ public class AttackPound : MonoBehaviour
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null && !damagable.IsPlayer)
         {
-            damagable.TakeDamage(Damage);
+            damagable.TakeDamage((int)(Damage * PlayerStats.Instance.player.Attack.GetLimbMultiplier()));
             Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
             damagable.ApplyKnockback(knockback * Knockback);
         }

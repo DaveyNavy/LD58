@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttackSpin : MonoBehaviour
 {
     [SerializeField] int Lifetime;
-    [SerializeField] int Damage;
+    [SerializeField] public int Damage;
     private int _lifetimeTimer;
 
     private void Awake()

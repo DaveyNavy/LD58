@@ -27,7 +27,7 @@ public class Attack : MonoBehaviour
                 Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
                 damagable.ApplyKnockback(knockback * Knockback);
             }
-            damagable.TakeDamage(Damage);
+            damagable.TakeDamage((int)(Damage * PlayerStats.Instance.player.Attack.GetLimbMultiplier()));
         }
     }
 }
