@@ -8,8 +8,8 @@ public class BossEnemy : Damagable
     public int speed;
 
     [SerializeField] private int aoeCooldown = 200;
-    [SerializeField] private int aoeMeteors = 5;
-    [SerializeField] private GameObject meteorPrefab;
+    [SerializeField] private GameObject bossAttackPrefab;
+    [SerializeField] private GameObject bossAttack2Prefab;
     private bool inRange;
     private int aoeTimer = 0;
 
@@ -32,11 +32,19 @@ public class BossEnemy : Damagable
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
         if (aoeTimer == 0 && inRange)
         {
+            Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
+            Vector3 spawnPos = transform.position + directionToPlayer * 4f;
+            float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90f;
+            Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+            Instantiate(bossAttackPrefab, spawnPos, rotation);
+
             aoeTimer = aoeCooldown;
         }
-        if (aoeTimer >= aoeCooldown - aoeMeteors * 4 && aoeTimer % 4 == 0)
+        if (aoeTimer == 0 && !inRange)
         {
-            //Instantiate(meteorPrefab, PlayerStats.Instance.playerTransform + (Vector3)(Random.insideUnitCircle * 3f), Quaternion.identity);
+            Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
+
+            aoeTimer = aoeCooldown;
         }
     }
 

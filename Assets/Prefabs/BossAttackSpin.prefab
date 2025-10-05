@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2277708508112975459
+--- !u!1 &232801986427644394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8706345153096334199}
-  - component: {fileID: 1507519252136972972}
-  - component: {fileID: 78584557298353253}
-  - component: {fileID: 4935602779389511682}
-  - component: {fileID: 7780409410812165509}
+  - component: {fileID: 4680639553556283691}
+  - component: {fileID: 3214569135035782360}
+  - component: {fileID: 8443702399997624083}
+  - component: {fileID: 3657287770633154744}
   m_Layer: 0
-  m_Name: BossEnemy
+  m_Name: BossAttackSpin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8706345153096334199
+--- !u!4 &4680639553556283691
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277708508112975459}
+  m_GameObject: {fileID: 232801986427644394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.14, y: -2.74, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -0.76092, y: -2.05602, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1507519252136972972
+--- !u!212 &3214569135035782360
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277708508112975459}
+  m_GameObject: {fileID: 232801986427644394}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,9 +80,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  m_SortingOrder: -5
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,13 +92,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &78584557298353253
+--- !u!58 &8443702399997624083
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277708508112975459}
+  m_GameObject: {fileID: 232801986427644394}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -123,61 +122,23 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!50 &4935602779389511682
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277708508112975459}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 2
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!114 &7780409410812165509
+--- !u!114 &3657287770633154744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2277708508112975459}
+  m_GameObject: {fileID: 232801986427644394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820f66d0fe81006488e6a0a1a162550d, type: 3}
+  m_Script: {fileID: 11500000, guid: c2b2a815950ee724bb3645e44395c120, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossEnemy
-  _maxHealth: 200
-  _curHealth: 0
-  IsPlayer: 0
-  _contactDamage: 0
-  _contactDamageGiveKB: 0
-  _contactDamageTakeKB: 0
-  knockbackImmune: 0
-  strafeDistance: 3
-  speed: 1
-  aoeCooldown: 200
-  bossAttackPrefab: {fileID: 232801986427644394, guid: bb8581f740f19494e822d03935959774, type: 3}
-  bossAttack2Prefab: {fileID: 232801986427644394, guid: 014f74227e8c14b41aafaba4d3fcca2a, type: 3}
-  StunTimer: 0
+  m_EditorClassIdentifier: Assembly-CSharp::BossAttackSpin
+  Lifetime: 50
+  Damage: 2
