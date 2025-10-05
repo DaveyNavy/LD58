@@ -11,8 +11,8 @@ public class Damagable : MonoBehaviour
     }
 
     #region Health
-    [SerializeField] private int _maxHealth;
-    [SerializeField] private int _curHealth;
+    [SerializeField] public int _maxHealth;
+    [SerializeField] public int _curHealth;
     [SerializeField] public bool IsPlayer;
     [SerializeField] private int _fleshDrops;
     protected Rigidbody2D _rb;
