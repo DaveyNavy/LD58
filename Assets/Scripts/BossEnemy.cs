@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BossEnemy : Damagable
@@ -13,10 +14,32 @@ public class BossEnemy : Damagable
     private bool inRange;
     private int aoeTimer = 0;
 
+    private Coroutine Coroutine;
+
+    private LineRenderer lineRenderer;
+
+    private int originalSpeed;
+
+    private int _attackAnimTimer = 500;
+
+
+
     void Start()
     {
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
+
+        lineRenderer = gameObject.AddComponent<LineRenderer>();
+        lineRenderer.positionCount = 2;
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
+
+        // Assign a material (required)
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.enabled = false;
+
+        originalSpeed = speed;
+
     }
 
     void Update()
@@ -32,7 +55,7 @@ public class BossEnemy : Damagable
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
         if (aoeTimer == 0 && inRange)
         {
-            if (Random.value < 0.8f)
+            if (Random.value < 0.6f)
             {
                 Daddy1();
             }
@@ -59,9 +82,48 @@ public class BossEnemy : Damagable
     }
     private void Daddy2()
     {
+        Coroutine = StartCoroutine(ChargeAttack());
+
         Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
 
         aoeTimer = aoeCooldown;
+    }
+
+    private IEnumerator ChargeAttack()
+    {
+        _attackAnimTimer = 150;
+        _rb.linearVelocity = Vector2.zero;
+
+        speed = 0;
+
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, PlayerStats.Instance.playerTransform);
+        Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
+
+        lineRenderer.enabled = true;
+        for (int i = 0; i < 30; i++)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        lineRenderer.enabled = false;
+
+        speed = originalSpeed * 15;
+        Vector2 desiredVelocity = directionToPlayer * speed;
+        Vector2 currentVelocity = _rb.linearVelocity;
+        Vector2 velocityChange = desiredVelocity - currentVelocity;
+
+        for (int i = 0; i < 30; i++)
+        {
+            _rb.AddForce(velocityChange, ForceMode2D.Force);
+            yield return new WaitForFixedUpdate();
+        }
+
+        speed = 0;
+        for (int i = 0; i < 50; i++)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        speed = originalSpeed;
     }
 
     #region Effects
