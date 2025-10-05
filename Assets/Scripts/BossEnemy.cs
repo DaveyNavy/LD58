@@ -32,20 +32,36 @@ public class BossEnemy : Damagable
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
         if (aoeTimer == 0 && inRange)
         {
-            Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
-            Vector3 spawnPos = transform.position + directionToPlayer * 4f;
-            float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90f;
-            Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
-            Instantiate(bossAttackPrefab, spawnPos, rotation);
-
-            aoeTimer = aoeCooldown;
+            if (Random.value < 0.8f)
+            {
+                Daddy1();
+            }
+            else
+            {
+                Daddy2();
+            }
         }
         if (aoeTimer == 0 && !inRange)
         {
-            Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
-
-            aoeTimer = aoeCooldown;
+            Daddy2();
         }
+    }
+
+    private void Daddy1()
+    {
+        Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
+        Vector3 spawnPos = transform.position + directionToPlayer * 4f;
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90f;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+        Instantiate(bossAttackPrefab, spawnPos, rotation);
+
+        aoeTimer = aoeCooldown;
+    }
+    private void Daddy2()
+    {
+        Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
+
+        aoeTimer = aoeCooldown;
     }
 
     #region Effects
