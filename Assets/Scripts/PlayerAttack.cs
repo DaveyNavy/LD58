@@ -72,7 +72,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackPoundTimer > 0) return;
         _attackPoundTimer = AttackPoundCD;
         Debug.Log("Player Attack Pound!");
-        Instantiate(AttackPoundPrefab, GetSpawnPos(_player.Facing), GetSpawnRot(_player.Facing));
+        Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
     }
     private void AttackSpin()
     {

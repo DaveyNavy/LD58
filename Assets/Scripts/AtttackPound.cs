@@ -4,6 +4,7 @@ public class AttackPound : MonoBehaviour
 {
     [SerializeField] int Lifetime;
     [SerializeField] int Damage;
+    [SerializeField] int Knockback;
     [SerializeField] float StunDuration;
     private int _lifetimeTimer;
 
@@ -23,6 +24,8 @@ public class AttackPound : MonoBehaviour
         if (damagable != null && !damagable.IsPlayer)
         {
             damagable.TakeDamage(Damage);
+            Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
+            damagable.ApplyKnockback(knockback * Knockback);
         }
         var enemy = collision.GetComponent<Enemy>();
         if (enemy != null)

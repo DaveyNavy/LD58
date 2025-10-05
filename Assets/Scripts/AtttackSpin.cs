@@ -4,7 +4,6 @@ public class AttackSpin : MonoBehaviour
 {
     [SerializeField] int Lifetime;
     [SerializeField] int Damage;
-    [SerializeField] int Knockback;
     private int _lifetimeTimer;
 
     private void Awake()
@@ -22,8 +21,6 @@ public class AttackSpin : MonoBehaviour
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null && !damagable.IsPlayer)
         {
-            Vector2 knockback = (collision.transform.position - PlayerStats.Instance.player.transform.position).normalized;
-            damagable.ApplyKnockback(knockback * Knockback);
             damagable.TakeDamage(Damage);
         }
     }
