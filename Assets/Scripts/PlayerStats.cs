@@ -60,4 +60,22 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+
+    public void AddLimb()
+    {
+        if (limbs < 4 && flesh >= GetCurrentLimbCost())
+        {
+            UpdateFlesh(-GetCurrentLimbCost());
+            limbs++;
+        }
+    }
+
+    public void RepairLimb()
+    {
+        if (flesh > 0 && limbHealth < 100)
+        {
+            UpdateFlesh(-1);
+            limbHealth = Mathf.Min(limbHealth + 5, 100);
+        }
+    }
 }
