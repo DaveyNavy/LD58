@@ -29,7 +29,9 @@ public class PlayerMovement : Damagable
 
     private void FixedUpdate()
     {
-        Vector2 desiredVelocity = MoveInput * Speed;
+        float multiplier = PlayerStats.Instance.GetCurrentDaddyMultiplier();
+
+        Vector2 desiredVelocity = MoveInput * Speed * multiplier;
         Vector2 currentVelocity = Rigidbody.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
