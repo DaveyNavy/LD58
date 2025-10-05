@@ -750,9 +750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65406da3b638cc04a80b6e29d71ed4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargingEnemy
+  flesh: {fileID: 2184338832689168756, guid: 5b63e04fb2ca84249bee327757316155, type: 3}
   _maxHealth: 100
   _curHealth: 0
   IsPlayer: 0
+  _fleshDrops: 3
   _contactDamage: 40
   _contactDamageGiveKB: 300
   _contactDamageTakeKB: 0
@@ -831,7 +833,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277708508112975459, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086339864786826915, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
+      propertyPath: flesh
+      value: 
+      objectReference: {fileID: 2184338832689168756, guid: 5b63e04fb2ca84249bee327757316155, type: 3}
+    - target: {fileID: 4086339864786826915, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
+      propertyPath: _fleshDrops
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706345153096334199, guid: 8ffd9160905bb4347868f38e74bb816c, type: 3}
       propertyPath: m_LocalPosition.x
