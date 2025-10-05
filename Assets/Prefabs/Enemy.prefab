@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b397c6e952161444ba1f1e431cfbdc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  flesh: {fileID: 2184338832689168756, guid: 5b63e04fb2ca84249bee327757316155, type: 3}
   _maxHealth: 100
   _curHealth: 0
   IsPlayer: 0
+  _fleshDrops: 1
   _contactDamage: 20
   _contactDamageGiveKB: 300
   _contactDamageTakeKB: 100

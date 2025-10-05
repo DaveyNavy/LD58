@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,7 +15,6 @@ public class PlayerMovement : Damagable
     protected override void Awake()
     {
         base.Awake();
-        //
         Rigidbody = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         _mainCamera = Camera.main;
@@ -27,6 +27,46 @@ public class PlayerMovement : Damagable
             Facing = MoveInput.normalized;
     }
 
+
+    public KeyCode key = KeyCode.LeftShift;
+    public float holdTime = 1f;
+    private float holdTimer = 0f;
+    private bool actionTriggered = false;
+
+    void Update()
+    {
+        if (Input.GetKey(key))
+        {
+            Speed = 0;
+            holdTimer += Time.deltaTime;
+
+            if (!actionTriggered && holdTimer >= holdTime)
+            {
+                actionTriggered = true;
+                OnHoldComplete();
+            }
+        }
+        else
+        {
+            holdTimer = 0f;
+            actionTriggered = false;
+            Speed = 10f;
+        }
+    }
+
+    void OnHoldComplete()
+    {
+        if (PlayerStats.Instance.flesh > 0 && PlayerStats.Instance.limbHealth < 100)
+        {
+            PlayerStats.Instance.RepairLimb();
+        }
+        else if (PlayerStats.Instance.limbs < 4 && PlayerStats.Instance.flesh >= PlayerStats.Instance.GetCurrentLimbCost())
+        {
+            PlayerStats.Instance.AddLimb();
+        }
+        holdTimer = 0f;
+        actionTriggered = false;
+    }
     private void FixedUpdate()
     {
         float multiplier = PlayerStats.Instance.GetCurrentDaddyMultiplier();

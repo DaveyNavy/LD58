@@ -33,13 +33,4 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-
-    public void AddLimb()
-    {
-        if (PlayerStats.Instance.limbs < 4 && PlayerStats.Instance.flesh >= PlayerStats.Instance.GetCurrentLimbCost())
-        {
-            PlayerStats.Instance.UpdateFlesh(-PlayerStats.Instance.GetCurrentLimbCost());
-            PlayerStats.Instance.limbs++;
-        }
-    }
 }
