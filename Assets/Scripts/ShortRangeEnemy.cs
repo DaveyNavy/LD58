@@ -66,15 +66,20 @@ public class ShortRangeEnemy : Enemy
 
         if (StunTimer > 0.1f) yield break;
 
-        Instantiate(windupPrefab, spawnPos, Quaternion.identity);
+        // Calculate rotation that faces the player (2D)
+        float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
 
-        for (int i = 0; i < 50; i++)
+        // Spawn windup facing the player
+        Instantiate(windupPrefab, spawnPos, rotation);
+
+        for (int i = 0; i < 40; i++)
         {
             yield return new WaitForFixedUpdate();
         }
 
         if (StunTimer > 0.1f) yield break;
 
-        Instantiate(squarePrefab, spawnPos, Quaternion.identity);
+        Instantiate(squarePrefab, spawnPos, rotation);
     }
 }

@@ -111,12 +111,13 @@ MonoBehaviour:
   _contactDamage: 0
   _contactDamageGiveKB: 0
   _contactDamageTakeKB: 0
-  speed: 2
+  knockbackImmune: 1
+  speed: 3
   StunTimer: 0
   squarePrefab: {fileID: 232801986427644394, guid: 8e187b191b0b2c84e9f904025eadc8c3, type: 3}
   windupPrefab: {fileID: 232801986427644394, guid: 6e058fc9b3d02d645a4efbc8fcd73f4a, type: 3}
   spawnDistance: 2
-  AttackCD: 50
+  AttackCD: 75
 --- !u!50 &4959896201263863234
 Rigidbody2D:
   serializedVersion: 5
@@ -143,7 +144,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7801590181644051055
 BoxCollider2D:
   m_ObjectHideFlags: 0
