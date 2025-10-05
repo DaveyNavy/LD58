@@ -75,6 +75,8 @@ public class ShortRangeEnemy : Enemy
 
         for (int i = 0; i < 40; i++)
         {
+            while (Time.timeScale == 0f)
+                yield return null;
             yield return new WaitForFixedUpdate();
         }
 

@@ -1,9 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour 
 {
     public static PlayerStats Instance;
+    public TMP_Text fleshText;
 
     public int flesh = 100;
     public int limbs = 1;
@@ -17,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 
         player = GetComponent<PlayerMovement>();
     }
+
 
     private void Update()
     {
@@ -36,5 +39,11 @@ public class PlayerStats : MonoBehaviour
             default:
                 return -1;
         } 
+    }
+
+    public void UpdateFlesh(int change)
+    {
+        flesh += change;
+        fleshText.text = "Flesh: " + flesh;
     }
 }

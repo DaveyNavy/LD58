@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569d4b7e844740845bcee8441f8b5928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FleshCollectible
+  fleshText: {fileID: 3099691337741457739, guid: 420306b1631f4be479737f95d8502a68, type: 3}

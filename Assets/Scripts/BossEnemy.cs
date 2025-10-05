@@ -103,6 +103,9 @@ public class BossEnemy : Damagable
         lineRenderer.enabled = true;
         for (int i = 0; i < 30; i++)
         {
+            while (Time.timeScale == 0f)
+                yield return null;
+
             yield return new WaitForFixedUpdate();
         }
         lineRenderer.enabled = false;
@@ -114,6 +117,8 @@ public class BossEnemy : Damagable
 
         for (int i = 0; i < 30; i++)
         {
+            while (Time.timeScale == 0f)
+                yield return null;
             _rb.AddForce(velocityChange, ForceMode2D.Force);
             yield return new WaitForFixedUpdate();
         }
@@ -121,6 +126,8 @@ public class BossEnemy : Damagable
         speed = 0;
         for (int i = 0; i < 50; i++)
         {
+            while (Time.timeScale == 0f)
+                yield return null;
             yield return new WaitForFixedUpdate();
         }
         speed = originalSpeed;
