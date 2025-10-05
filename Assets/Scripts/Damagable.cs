@@ -45,7 +45,7 @@ public class Damagable : MonoBehaviour
         _rb.AddForce(kb);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         // Find player to damage:
         if (_contactDamage > 0 && collision.gameObject.TryGetComponent<PlayerMovement>(out PlayerMovement player))

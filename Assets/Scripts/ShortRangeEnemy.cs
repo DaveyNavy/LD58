@@ -18,13 +18,13 @@ public class ShortRangeEnemy : Enemy
 
     private int originalSpeed;
 
-    new private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         originalSpeed = speed;
     }
 
-    new private void Update()
+    protected override void Update()
     {
         base.Update();
         rb = GetComponent<Rigidbody2D>();
