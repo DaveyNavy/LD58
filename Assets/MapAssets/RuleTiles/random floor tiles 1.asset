@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5e9647bd352464a86b345411c51858, type: 3}
+  m_Name: random floor tiles 1
+  m_EditorClassIdentifier: Assembly-CSharp::WeightedRandomTile
+  sprites:
+  - sprite: {fileID: -6872791284972109754, guid: 4fcd896a0926606409c683ccbecbb1f9, type: 3}
+    weight: 0.5
+  - sprite: {fileID: 302654008574724773, guid: 4fcd896a0926606409c683ccbecbb1f9, type: 3}
+    weight: 0.6
+  - sprite: {fileID: 6611585234671681051, guid: 4fcd896a0926606409c683ccbecbb1f9, type: 3}
+    weight: 1
+  - sprite: {fileID: 2455070937902524395, guid: 4fcd896a0926606409c683ccbecbb1f9, type: 3}
+    weight: 0.05
+  color: {r: 1, g: 1, b: 1, a: 1}
+  colliderType: 1

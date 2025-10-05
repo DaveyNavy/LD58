@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: f137772ff7b0abc4784acfd096945a16
+guid: b264346a49f113244aa78665d5172f97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4137030636359802646
-    second: wallsheet_0
+      213: -3813957895643319183
+    second: doors_0
   - first:
-      213: -2600922447529477653
-    second: wallsheet_1
+      213: -5869873724788712370
+    second: doors_1
   - first:
-      213: 3115351446846652114
-    second: wallsheet_2
+      213: -7037842594108204779
+    second: doors_2
   - first:
-      213: -2388044296992473607
-    second: wallsheet_3
+      213: -7794273071397281860
+    second: doors_3
   - first:
-      213: 7592100370109628915
-    second: wallsheet_4
+      213: -3625015000923761378
+    second: doors_4
   - first:
-      213: -1122134598783477229
-    second: wallsheet_5
+      213: -1156514691743307414
+    second: doors_5
   - first:
-      213: -2316507608578306244
-    second: wallsheet_6
+      213: 3997338004448197912
+    second: doors_6
   - first:
-      213: 3633969210475706108
-    second: wallsheet_7
-  - first:
-      213: -1816844258848033757
-    second: wallsheet_8
-  - first:
-      213: -27556747759753811
-    second: wallsheet_9
-  - first:
-      213: -5217804919698372829
-    second: wallsheet_10
-  - first:
-      213: -4586610840507886905
-    second: wallsheet_11
+      213: 8272023497553938944
+    second: doors_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -146,265 +134,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wallsheet_0
+      name: doors_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 73
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+        x: 7
+        y: 99
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61f5221e17fa96930800000000000000
-      internalID: 4137030636359802646
+      spriteID: 17432e94089121bc0800000000000000
+      internalID: -3813957895643319183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_1
+      name: doors_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 73
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+        x: 77
+        y: 99
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be97aa270daa7ebd0800000000000000
-      internalID: -2600922447529477653
+      spriteID: e4cd19d72f40a8ea0800000000000000
+      internalID: -5869873724788712370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_2
+      name: doors_2
       rect:
         serializedVersion: 2
-        x: 83
-        y: 73
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+        x: 150
+        y: 99
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2de3bc392a3fb3b20800000000000000
-      internalID: 3115351446846652114
+      spriteID: 5191111e27f845e90800000000000000
+      internalID: -7037842594108204779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_3
+      name: doors_3
       rect:
         serializedVersion: 2
-        x: 123
-        y: 72
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
+        x: 222
+        y: 99
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fdbdd14d56fbded0800000000000000
-      internalID: -2388044296992473607
+      spriteID: cbfd8f8ffed25d390800000000000000
+      internalID: -7794273071397281860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_4
+      name: doors_4
       rect:
         serializedVersion: 2
-        x: 159
-        y: 72
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
+        x: 7
+        y: 12
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f10f7bdf0f8c5960800000000000000
-      internalID: 7592100370109628915
+      spriteID: e151a74101c51bdc0800000000000000
+      internalID: -3625015000923761378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_5
+      name: doors_5
       rect:
         serializedVersion: 2
-        x: 195
-        y: 72
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
+        x: 79
+        y: 12
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31ad55917806d60f0800000000000000
-      internalID: -1122134598783477229
+      spriteID: a69ae1de30c33ffe0800000000000000
+      internalID: -1156514691743307414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_6
+      name: doors_6
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+        x: 152
+        y: 12
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3f43377a9c1adfd0800000000000000
-      internalID: -2316507608578306244
+      spriteID: 81dbd4a7cb5697730800000000000000
+      internalID: 3997338004448197912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wallsheet_7
+      name: doors_7
       rect:
         serializedVersion: 2
-        x: 47
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+        x: 222
+        y: 12
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf67c1b4eb37e6230800000000000000
-      internalID: 3633969210475706108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wallsheet_8
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 324b72bc5c549c6e0800000000000000
-      internalID: -1816844258848033757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wallsheet_9
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da56d9ea8491e9ff0800000000000000
-      internalID: -27556747759753811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wallsheet_10
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 327c7161212a697b0800000000000000
-      internalID: -5217804919698372829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wallsheet_11
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 5
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c25290ddb51950c0800000000000000
-      internalID: -4586610840507886905
+      spriteID: 00a03614b812cc270800000000000000
+      internalID: 8272023497553938944
       vertices: []
       indices: 
       edges: []
@@ -413,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 249cdf57e24a57b4783f7dbc6fe1b926
+    spriteID: 0a62cb26fc0cd4845a90c217f6f8c404
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wallsheet_0: 4137030636359802646
-      wallsheet_1: -2600922447529477653
-      wallsheet_10: -5217804919698372829
-      wallsheet_11: -4586610840507886905
-      wallsheet_2: 3115351446846652114
-      wallsheet_3: -2388044296992473607
-      wallsheet_4: 7592100370109628915
-      wallsheet_5: -1122134598783477229
-      wallsheet_6: -2316507608578306244
-      wallsheet_7: 3633969210475706108
-      wallsheet_8: -1816844258848033757
-      wallsheet_9: -27556747759753811
+      doors_0: -3813957895643319183
+      doors_1: -5869873724788712370
+      doors_2: -7037842594108204779
+      doors_3: -7794273071397281860
+      doors_4: -3625015000923761378
+      doors_5: -1156514691743307414
+      doors_6: 3997338004448197912
+      doors_7: 8272023497553938944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
