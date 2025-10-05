@@ -62,16 +62,17 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
-        _attackAnimTimer = 35;
         _facing = _player.Facing;
         _speed = PlayerStats.Instance.player.Speed;
         PlayerStats.Instance.player.Speed = 0;
+        _attackAnimTimer = (PlayerStats.Instance.limbs > 1) ? 2 : 35;
     }
     private void AttackPound()
     {
         if (_attackPoundTimer > 0) return;
         _attackPoundTimer = AttackPoundCD;
         Debug.Log("Player Attack Pound!");
+        Instantiate(AttackPoundPrefab, GetSpawnPos(_player.Facing), GetSpawnRot(_player.Facing));
     }
     private void AttackSpin()
     {

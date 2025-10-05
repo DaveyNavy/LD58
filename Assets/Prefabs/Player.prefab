@@ -117,6 +117,7 @@ MonoBehaviour:
   Speed: 10
   MoveInput: {x: 0, y: 0}
   Facing: {x: 1, y: 0}
+  Attack: {fileID: 0}
 --- !u!114 &3118759746719257174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ MonoBehaviour:
   AttackPoundCD: 50
   AttackSpinCD: 50
   AttackPrefab: {fileID: 232801986427644394, guid: bf7626440d2828244a4e7b01aef118aa, type: 3}
-  AttackPoundPrefab: {fileID: 0}
+  AttackPoundPrefab: {fileID: 232801986427644394, guid: 830a749d050a2494ea65d4fade2755c5, type: 3}
   AttackSpinPrefab: {fileID: 0}
 --- !u!114 &4275241892213043901
 MonoBehaviour:
@@ -243,3 +244,4 @@ MonoBehaviour:
   flesh: 100
   limbs: 1
   playerTransform: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}

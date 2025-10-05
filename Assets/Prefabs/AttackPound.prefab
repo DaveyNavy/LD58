@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4680639553556283691}
   - component: {fileID: 3214569135035782360}
   - component: {fileID: 2336030033227069199}
-  - component: {fileID: 2142615921193936296}
+  - component: {fileID: 7798121246626488633}
   m_Layer: 0
   m_Name: AttackPound
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.76092, y: -2.05602, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5169811, g: 0.5169811, b: 0.5169811, a: 0.45490196}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 0.754717, g: 0.2850744, b: 0, a: 0.45490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2142615921193936296
+--- !u!114 &7798121246626488633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,9 +147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 232801986427644394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41293631463abc47b96b5d213c67bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 960326811fb5df642be1b1ff3b4d22d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack
+  m_EditorClassIdentifier: Assembly-CSharp::AttackPound
   Lifetime: 10
-  Damage: 30
-  Knockback: 800
+  Damage: 10
+  StunDuration: 1

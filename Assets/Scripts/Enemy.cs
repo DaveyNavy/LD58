@@ -20,8 +20,18 @@ public class Enemy : Damagable
         }
     }
 
+    #region Effects
+    public float StunTimer;
+
+    #endregion Effects
+
     void MoveTowardPlayer()
     {
+        if (StunTimer > 0.1f)
+        {
+            StunTimer -= Time.deltaTime;
+            return;
+        }
         Vector2 direction = (PlayerStats.Instance.playerTransform - transform.position).normalized;
         Vector2 desiredVelocity = direction * speed;
         Vector2 currentVelocity = _rb.linearVelocity;
