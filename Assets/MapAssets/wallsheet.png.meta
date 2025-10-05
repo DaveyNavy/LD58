@@ -150,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 74
+        y: 73
         width: 32
         height: 64
       alignment: 9
@@ -172,7 +172,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 74
+        y: 73
         width: 32
         height: 64
       alignment: 9
@@ -194,7 +194,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 83
-        y: 74
+        y: 73
         width: 32
         height: 64
       alignment: 9
@@ -216,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 123
-        y: 74
+        y: 72
         width: 32
         height: 64
       alignment: 9
@@ -238,7 +238,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 159
-        y: 74
+        y: 72
         width: 32
         height: 64
       alignment: 9
@@ -260,7 +260,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 195
-        y: 74
+        y: 72
         width: 32
         height: 64
       alignment: 9
@@ -281,7 +281,7 @@ TextureImporter:
       name: wallsheet_6
       rect:
         serializedVersion: 2
-        x: 12
+        x: 11
         y: 5
         width: 32
         height: 64
@@ -413,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7495ca965bec5574190bc8dc5ca5d48a
+    spriteID: 249cdf57e24a57b4783f7dbc6fe1b926
     internalID: 0
     vertices: []
     indices: 
