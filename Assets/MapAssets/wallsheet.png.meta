@@ -1,34 +1,43 @@
 fileFormatVersion: 2
-guid: 07d6d7385aed91244986fe74954a8a93
+guid: f137772ff7b0abc4784acfd096945a16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8244928356750069815
-    second: homunculus_0
+      213: 4137030636359802646
+    second: wallsheet_0
   - first:
-      213: 4131805841188136473
-    second: homunculus_1
+      213: -2600922447529477653
+    second: wallsheet_1
   - first:
-      213: 8539565292360623966
-    second: homunculus_2
+      213: 3115351446846652114
+    second: wallsheet_2
   - first:
-      213: -2033653338384526550
-    second: homunculus_3
+      213: -2388044296992473607
+    second: wallsheet_3
   - first:
-      213: -753027808626699932
-    second: homunculus_4
+      213: 7592100370109628915
+    second: wallsheet_4
   - first:
-      213: -5246360352614336496
-    second: homunculus_5
+      213: -1122134598783477229
+    second: wallsheet_5
   - first:
-      213: -1535497942922830454
-    second: homunculus_6
+      213: -2316507608578306244
+    second: wallsheet_6
   - first:
-      213: 4735048529014748413
-    second: homunculus_7
+      213: 3633969210475706108
+    second: wallsheet_7
   - first:
-      213: 8632459640247554509
-    second: homunculus_8
+      213: -1816844258848033757
+    second: wallsheet_8
+  - first:
+      213: -27556747759753811
+    second: wallsheet_9
+  - first:
+      213: -5217804919698372829
+    second: wallsheet_10
+  - first:
+      213: -4586610840507886905
+    second: wallsheet_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,199 +146,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: homunculus_0
+      name: wallsheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 373
-        width: 1409
-        height: 1180
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cfed51d751249d80800000000000000
-      internalID: -8244928356750069815
+      spriteID: 61f5221e17fa96930800000000000000
+      internalID: 4137030636359802646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_1
+      name: wallsheet_1
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 555
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 47
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91627e4758f175930800000000000000
-      internalID: 4131805841188136473
+      spriteID: be97aa270daa7ebd0800000000000000
+      internalID: -2600922447529477653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_2
+      name: wallsheet_2
       rect:
         serializedVersion: 2
-        x: 1586
-        y: 528
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 83
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e57e86b8361a28670800000000000000
-      internalID: 8539565292360623966
+      spriteID: 2de3bc392a3fb3b20800000000000000
+      internalID: 3115351446846652114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_3
+      name: wallsheet_3
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 521
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 123
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a239d41401307c3e0800000000000000
-      internalID: -2033653338384526550
+      spriteID: 9fdbdd14d56fbded0800000000000000
+      internalID: -2388044296992473607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_4
+      name: wallsheet_4
       rect:
         serializedVersion: 2
-        x: 1628
-        y: 517
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 159
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46190d0a235bc85f0800000000000000
-      internalID: -753027808626699932
+      spriteID: 3f10f7bdf0f8c5960800000000000000
+      internalID: 7592100370109628915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_5
+      name: wallsheet_5
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 448
-        width: 40
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 195
+        y: 74
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 018bab24e0f2137b0800000000000000
-      internalID: -5246360352614336496
+      spriteID: 31ad55917806d60f0800000000000000
+      internalID: -1122134598783477229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_6
+      name: wallsheet_6
       rect:
         serializedVersion: 2
-        x: 1658
-        y: 469
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8dddbe91c0d0bae0800000000000000
-      internalID: -1535497942922830454
+      spriteID: c3f43377a9c1adfd0800000000000000
+      internalID: -2316507608578306244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_7
+      name: wallsheet_7
       rect:
         serializedVersion: 2
-        x: 1390
-        y: 433
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 47
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df4f82ebc8546b140800000000000000
-      internalID: 4735048529014748413
+      spriteID: cf67c1b4eb37e6230800000000000000
+      internalID: 3633969210475706108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: homunculus_8
+      name: wallsheet_8
       rect:
         serializedVersion: 2
-        x: 1335
-        y: 361
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 83
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc11ada5e48acc770800000000000000
-      internalID: 8632459640247554509
+      spriteID: 324b72bc5c549c6e0800000000000000
+      internalID: -1816844258848033757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsheet_9
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da56d9ea8491e9ff0800000000000000
+      internalID: -27556747759753811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsheet_10
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327c7161212a697b0800000000000000
+      internalID: -5217804919698372829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallsheet_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 5
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c25290ddb51950c0800000000000000
+      internalID: -4586610840507886905
       vertices: []
       indices: 
       edges: []
@@ -338,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7495ca965bec5574190bc8dc5ca5d48a
     internalID: 0
     vertices: []
     indices: 
@@ -348,15 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      homunculus_0: -8244928356750069815
-      homunculus_1: 4131805841188136473
-      homunculus_2: 8539565292360623966
-      homunculus_3: -2033653338384526550
-      homunculus_4: -753027808626699932
-      homunculus_5: -5246360352614336496
-      homunculus_6: -1535497942922830454
-      homunculus_7: 4735048529014748413
-      homunculus_8: 8632459640247554509
+      wallsheet_0: 4137030636359802646
+      wallsheet_1: -2600922447529477653
+      wallsheet_10: -5217804919698372829
+      wallsheet_11: -4586610840507886905
+      wallsheet_2: 3115351446846652114
+      wallsheet_3: -2388044296992473607
+      wallsheet_4: 7592100370109628915
+      wallsheet_5: -1122134598783477229
+      wallsheet_6: -2316507608578306244
+      wallsheet_7: 3633969210475706108
+      wallsheet_8: -1816844258848033757
+      wallsheet_9: -27556747759753811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
