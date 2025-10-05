@@ -26,6 +26,13 @@ public class PlayerAttack : MonoBehaviour
         _player = GetComponent<PlayerMovement>();
         _speed = PlayerStats.Instance.player.Speed;
     }
+    public void ResetCooldowns()
+    {
+        _attackTimer = 0;
+        _attackPoundTimer = 0;
+        _attackSpinTimer = 0;
+        _attackDashTimer = 0;
+    }
     private void FixedUpdate()
     {
         _attackTimer = Mathf.Max(0, _attackTimer - 1);

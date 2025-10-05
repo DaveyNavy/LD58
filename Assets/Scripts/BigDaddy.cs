@@ -36,10 +36,11 @@ public class BigDaddy : Damagable
     public override bool TakeDamage(int amount)
     {
         // Give flesh:
-        amount = Mathf.Min(amount, PlayerStats.Instance.flesh);
+        amount = Mathf.Min(1, PlayerStats.Instance.flesh);
         PlayerStats.Instance.UpdateFlesh(-amount);
         PlayerStats.Instance.DaddyFlesh += amount;
         PlayerStats.Instance.player.Heal(amount);
+        PlayerStats.Instance.player.Attack.ResetCooldowns();
         return true;
     }
 }
