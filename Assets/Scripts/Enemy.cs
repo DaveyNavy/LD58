@@ -29,6 +29,8 @@ public class Enemy : Damagable
 
     void MoveTowardPlayer()
     {
+        if (Time.timeScale == 0f)
+            return;
         if (StunTimer > 0.1f)
         {
             StunTimer -= Time.deltaTime;
