@@ -13,17 +13,84 @@ public class PlayerStats : MonoBehaviour
     public PlayerMovement player;
 
     public int limbHealth = 100;
+
+    public int DaddyFlesh = 75;
+    public TextMeshProUGUI daddyStatusText;
+
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
 
         player = GetComponent<PlayerMovement>();
+
+        daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
     }
+
+    private float daddyFleshDecayTimer = 0f;
 
     private void Update()
     {
         playerTransform = transform.position;
+
+        if (DaddyFlesh >= 150) // 150+
+        {
+            daddyStatusText.text = "Big Daddy is gonna bust!";
+        }
+        else if (DaddyFlesh >= 100) // 100 -> 150
+        {
+            daddyStatusText.text = "Big Daddy is Happy!";
+        }
+        else if (DaddyFlesh >= 50) // 50 -> 100
+        {
+            daddyStatusText.text = "Big Daddy is Content!";
+        }
+        else if (DaddyFlesh > 10) // 10 -> 50
+        {
+            daddyStatusText.text = "Big Daddy is Sad! (" + (50 - DaddyFlesh) + " more flesh needed)";
+        }
+        else // 0 -> 10
+        {
+            daddyStatusText.text = "Big Daddy is grief-stricken! (" + (50 - DaddyFlesh) + " more flesh needed)";
+        }
+
+        // Daddy flesh decay (1 flesh every second)
+        daddyFleshDecayTimer += Time.deltaTime;
+        if (daddyFleshDecayTimer >= 1f)
+        {
+            DaddyFlesh = Math.Max(0, DaddyFlesh - 1);
+            daddyFleshDecayTimer = 0f;
+
+            // Daddy buffs:
+            if (DaddyFlesh < 10)
+            {
+                player.TakeDamage(1);
+            }
+        }
+    }
+
+    public float GetCurrentDaddyMultiplier()
+    {
+        if (DaddyFlesh >= 150) // 150+
+        {
+            return 1.5f;
+        }
+        else if (DaddyFlesh >= 100) // 100 -> 150
+        {
+            return 1.2f;
+        }
+        else if (DaddyFlesh >= 50) // 50 -> 100
+        {
+            return 1.0f;
+        }
+        else if (DaddyFlesh >= 10) // 10 -> 50
+        {
+            return 0.7f;
+        }
+        else // 0 -> 10
+        {
+            return 0.4f;
+        }
     }
 
     public int GetCurrentLimbCost()
