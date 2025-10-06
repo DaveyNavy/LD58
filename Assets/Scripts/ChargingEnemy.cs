@@ -47,7 +47,7 @@ public class ChargingEnemy : Enemy
         lineRenderer2.sortingOrder = 10;
 
         //
-        SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.misc1, true);
+        //SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.misc1, true);
     }
 
     new private void Awake()

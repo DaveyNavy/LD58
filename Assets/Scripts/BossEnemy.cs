@@ -12,6 +12,7 @@ public class BossEnemy : Damagable
     [SerializeField] private GameObject bossAttackPrefab;
     [SerializeField] private GameObject bossAttack2Prefab;
     private bool inRange;
+    private bool outRange;
     private int aoeTimer = 0;
 
     private Coroutine Coroutine;
@@ -44,20 +45,19 @@ public class BossEnemy : Damagable
         animator = GetComponent<Animator>();
 
         //
-        SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk1, true);
+        //SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk1, true);
     }
 
     void Update()
     {
-        if (IsSpriteOnScreen())
-        {
-            MoveTowardPlayer();
-        }
+        MoveTowardPlayer();
     }
 
     protected override void FixedUpdate()
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
+
+        if (outRange) return;
 
         if (aoeTimer < aoeCooldown - 60)
         {
@@ -160,6 +160,7 @@ public class BossEnemy : Damagable
         Vector2 toPlayer = PlayerStats.Instance.playerTransform - transform.position;
         int multiplier = (toPlayer.magnitude < strafeDistance) ?  -1 : 1;
         inRange = (toPlayer.magnitude < strafeDistance + 2f);
+        outRange = (toPlayer.magnitude > strafeDistance + 15f);
 
         Vector2 direction = toPlayer.normalized;
         Vector2 desiredVelocity = direction * speed * multiplier;

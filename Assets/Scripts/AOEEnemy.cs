@@ -22,10 +22,10 @@ public class AOEEnemy : Damagable
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
 
-        AudioSource s = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, true);
-        s.volume = 0.5f;
-        s.loop = true;
-        s.pitch = 0.6f;
+        //AudioSource s = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, true);
+        //s.volume = 0.5f;
+        //s.loop = true;
+        //s.pitch = 0.6f;
     }
 
     void Update()

@@ -123,6 +123,8 @@ public class PlayerMovement : Damagable
     }
     protected override void FixedUpdate()
     {
+        base.FixedUpdate();
+
         float multiplier = PlayerStats.Instance.GetCurrentDaddyMultiplier();
 
         Vector2 desiredVelocity = MoveInput * Speed * multiplier;

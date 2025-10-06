@@ -97,6 +97,7 @@ public class SoundManager : MonoBehaviour
         if (target == null || clip == null) return null;
         AudioSource source = target.gameObject.AddComponent<AudioSource>();
         source.clip = clip;
+        source.maxDistance = 20f;
         if (play)
             source.Play();
 
