@@ -32,11 +32,12 @@ public class PlayerMovement : Damagable
 
         footstepSource1 = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk1, false);
         footstepSource1.loop = true;
-        footstepSource1.volume = 0.3f;
+        footstepSource1.volume = 0f;
 
         footstepSource2 = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk2, false);
         footstepSource2.loop = true;
-        footstepSource2.volume = 0.3f;
+        footstepSource2.volume = 0.5f;
+        footstepSource2.pitch = 2f;
     }
 
     public void OnMove(InputValue value)
@@ -120,7 +121,7 @@ public class PlayerMovement : Damagable
         holdTimer = 0f;
         actionTriggered = false;
     }
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
         float multiplier = PlayerStats.Instance.GetCurrentDaddyMultiplier();
 
@@ -136,6 +137,8 @@ public class PlayerMovement : Damagable
         ParticleSystem vfx = Instantiate(PlayerStats.Instance.deathvfx, transform.position, Quaternion.identity);
         vfx.transform.localScale = transform.localScale / 2f;
         vfx.Play();
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.death1, 0.1f, 0.7f);
+
 
         Debug.Log("Player Died!");
         GetComponent<Collider2D>().enabled = false;

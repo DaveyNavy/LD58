@@ -34,6 +34,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip misc1;
     public AudioClip misc2;
     public AudioClip liminal1;
+    public AudioClip chargeup1;
+    public AudioClip eat1;
 
 
     private AudioSource ambienceSource;

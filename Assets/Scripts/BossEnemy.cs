@@ -43,6 +43,8 @@ public class BossEnemy : Damagable
 
         animator = GetComponent<Animator>();
 
+        //
+        SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk1, true);
     }
 
     void Update()
@@ -53,13 +55,18 @@ public class BossEnemy : Damagable
         }
     }
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
 
         if (aoeTimer < aoeCooldown - 60)
         {
             animator.SetBool("IsAttacking", false);
+        }
+
+        if (aoeTimer == 0)
+        {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.death4, 0.7f);
         }
 
         if (aoeTimer == 0 && inRange)

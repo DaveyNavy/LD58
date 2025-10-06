@@ -21,6 +21,11 @@ public class AOEEnemy : Damagable
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
+
+        AudioSource s = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, true);
+        s.volume = 0.5f;
+        s.loop = true;
+        s.pitch = 0.6f;
     }
 
     void Update()
@@ -32,7 +37,7 @@ public class AOEEnemy : Damagable
         }
     }
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
         _attackAnimTimer = Mathf.Max(_attackAnimTimer - 1, 0);

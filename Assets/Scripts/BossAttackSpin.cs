@@ -9,6 +9,7 @@ public class BossAttackSpin : MonoBehaviour
     private void Awake()
     {
         _lifetimeTimer = Lifetime;
+        SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.misc1, true);
     }
     private void FixedUpdate()
     {

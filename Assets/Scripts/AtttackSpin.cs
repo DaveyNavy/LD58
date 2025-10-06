@@ -11,6 +11,7 @@ public class AttackSpin : MonoBehaviour
         _lifetimeTimer = Lifetime;
         transform.localScale = transform.localScale * PlayerStats.Instance.player.Attack.GetLimbMultiplier();
 
+        SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.misc1, true);
     }
     private void FixedUpdate()
     {
