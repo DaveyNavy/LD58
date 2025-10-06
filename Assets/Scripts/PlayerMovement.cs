@@ -213,5 +213,7 @@ public class PlayerMovement : Damagable
             EnemySpawner sp = spawner.GetComponent<EnemySpawner>();
             sp.Spawn();
         }
+
+        GameObject.Find("Canvas").transform.Find("TutCanvas").GetComponent<TutCanvas>().ShowOnDeath();
     }
 }

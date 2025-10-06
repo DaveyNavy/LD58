@@ -66,6 +66,8 @@ public class BigDaddy : Damagable
         PlayerStats.Instance.player.Attack.ResetCooldowns();
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.feed1, 0.7f, 2f);
 
+        popup.text = "yum! \n I still need " + (200 - PlayerStats.Instance.DaddyFlesh) + " more flesh";
+
         if (PlayerStats.Instance.DaddyFlesh >= 200)
         {
             PlayerStats.Instance.DaddyFlesh = 200;

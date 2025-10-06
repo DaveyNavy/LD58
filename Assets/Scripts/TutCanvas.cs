@@ -13,13 +13,15 @@ public class TutCanvas : MonoBehaviour
     [SerializeField] private Sprite sprite5;
     [SerializeField] private Sprite sprite6;
     [SerializeField] private Sprite sprite7;
+    [SerializeField] private Sprite sprite8;
+    [SerializeField] private Sprite spritetata;
 
     private int currentSpriteIndex = 0;
     private Sprite[] sprites;
 
     private void Start()
     {
-        sprites = new Sprite[] { sprite1, sprite2, sprite3, sprite4, sprite5, sprite6, sprite7 };
+        sprites = new Sprite[] { sprite1, sprite2, sprite3, sprite4, sprite5, sprite6, sprite7, sprite8 };
         if (sprites.Length > 0 && image != null)
         {
             image.sprite = sprites[0];
@@ -41,9 +43,16 @@ public class TutCanvas : MonoBehaviour
             if (currentSpriteIndex == sprites.Length - 1)
             {
                 gameObject.SetActive(false);
-                Time.timeScale = 1f; // Pause the game
+                Time.timeScale = 1f;
                 Time.fixedDeltaTime = 0.02f;
             }
         }
+    }
+
+    public void ShowOnDeath()
+    {
+        image.sprite = spritetata;
+        gameObject.SetActive(true);
+        currentSpriteIndex = sprites.Length - 1;
     }
 }
