@@ -187,11 +187,12 @@ public class PlayerMovement : Damagable
         else
         {
             // game won screen
+            GameObject.Find("EndCanvas").gameObject.SetActive(true);
         }
-            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-            {
-                Destroy(enemy);
-            }
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(enemy);
+        }
     }
 
     public void OnRespawn()

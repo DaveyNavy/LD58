@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class WinScreenManager : MonoBehaviour
 {
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("JoScene");
