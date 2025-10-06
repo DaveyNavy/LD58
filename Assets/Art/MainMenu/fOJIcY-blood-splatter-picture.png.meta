@@ -1,0 +1,1287 @@
+fileFormatVersion: 2
+guid: 2dbb04c244ddd4259a1e1f7d4af59a88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8145287671494754193
+    second: fOJIcY-blood-splatter-picture_0
+  - first:
+      213: 1856887062476763164
+    second: fOJIcY-blood-splatter-picture_1
+  - first:
+      213: 2952705441349443115
+    second: fOJIcY-blood-splatter-picture_2
+  - first:
+      213: 1160662312314187312
+    second: fOJIcY-blood-splatter-picture_3
+  - first:
+      213: 3974512375083706116
+    second: fOJIcY-blood-splatter-picture_4
+  - first:
+      213: 328866858957253314
+    second: fOJIcY-blood-splatter-picture_5
+  - first:
+      213: 6893955409988976273
+    second: fOJIcY-blood-splatter-picture_6
+  - first:
+      213: 74273911611865765
+    second: fOJIcY-blood-splatter-picture_7
+  - first:
+      213: -1622379526878323385
+    second: fOJIcY-blood-splatter-picture_8
+  - first:
+      213: 475481811160228192
+    second: fOJIcY-blood-splatter-picture_9
+  - first:
+      213: -5654680396090735271
+    second: fOJIcY-blood-splatter-picture_10
+  - first:
+      213: 1543776825570900380
+    second: fOJIcY-blood-splatter-picture_11
+  - first:
+      213: 1819455270627471873
+    second: fOJIcY-blood-splatter-picture_12
+  - first:
+      213: 337579790345330461
+    second: fOJIcY-blood-splatter-picture_13
+  - first:
+      213: 3008003598078700639
+    second: fOJIcY-blood-splatter-picture_14
+  - first:
+      213: -8217415382689266128
+    second: fOJIcY-blood-splatter-picture_15
+  - first:
+      213: 1170759048494707082
+    second: fOJIcY-blood-splatter-picture_16
+  - first:
+      213: 7405800462224954334
+    second: fOJIcY-blood-splatter-picture_17
+  - first:
+      213: -1525637870986159228
+    second: fOJIcY-blood-splatter-picture_18
+  - first:
+      213: 1397082368802275518
+    second: fOJIcY-blood-splatter-picture_19
+  - first:
+      213: -4549056514906440054
+    second: fOJIcY-blood-splatter-picture_20
+  - first:
+      213: 3894033628282876193
+    second: fOJIcY-blood-splatter-picture_21
+  - first:
+      213: 3374394770717155511
+    second: fOJIcY-blood-splatter-picture_22
+  - first:
+      213: -1899949459684151575
+    second: fOJIcY-blood-splatter-picture_23
+  - first:
+      213: 6291781540945816597
+    second: fOJIcY-blood-splatter-picture_24
+  - first:
+      213: -7389855122552170522
+    second: fOJIcY-blood-splatter-picture_25
+  - first:
+      213: -2438846038597936960
+    second: fOJIcY-blood-splatter-picture_26
+  - first:
+      213: 5385261502699724939
+    second: fOJIcY-blood-splatter-picture_27
+  - first:
+      213: -4379367499857334198
+    second: fOJIcY-blood-splatter-picture_28
+  - first:
+      213: -2028014284654170967
+    second: fOJIcY-blood-splatter-picture_29
+  - first:
+      213: 3393699033482106914
+    second: fOJIcY-blood-splatter-picture_30
+  - first:
+      213: 557670110525674722
+    second: fOJIcY-blood-splatter-picture_31
+  - first:
+      213: -1802610642875483633
+    second: fOJIcY-blood-splatter-picture_32
+  - first:
+      213: 9194432931859273006
+    second: fOJIcY-blood-splatter-picture_33
+  - first:
+      213: 2596622894643676302
+    second: fOJIcY-blood-splatter-picture_34
+  - first:
+      213: 4229803166941701530
+    second: fOJIcY-blood-splatter-picture_35
+  - first:
+      213: -4747516087295621711
+    second: fOJIcY-blood-splatter-picture_36
+  - first:
+      213: -5027163986393410650
+    second: fOJIcY-blood-splatter-picture_37
+  - first:
+      213: -5703141538449550268
+    second: fOJIcY-blood-splatter-picture_38
+  - first:
+      213: 9038501587170473379
+    second: fOJIcY-blood-splatter-picture_39
+  - first:
+      213: -7795418591012224645
+    second: fOJIcY-blood-splatter-picture_40
+  - first:
+      213: -6658113163293759304
+    second: fOJIcY-blood-splatter-picture_41
+  - first:
+      213: 8298334838176509266
+    second: fOJIcY-blood-splatter-picture_42
+  - first:
+      213: -4881196345487434363
+    second: fOJIcY-blood-splatter-picture_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_0
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60cf23b40026fe80800000000000000
+      internalID: -8145287671494754193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_1
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 503
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1032f2f1fcf4c910800000000000000
+      internalID: 1856887062476763164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_2
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 509
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e1ffd64fd1af820800000000000000
+      internalID: 2952705441349443115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 460
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03eabad39308b1010800000000000000
+      internalID: 1160662312314187312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 470
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407224082fd482730800000000000000
+      internalID: 3974512375083706116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_5
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 476
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2caab827aae509400800000000000000
+      internalID: 328866858957253314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 447
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e76cd6bef3caf50800000000000000
+      internalID: 6893955409988976273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_7
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 478
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa34b5aabfd70100800000000000000
+      internalID: 74273911611865765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 456
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d1d818a662c79e0800000000000000
+      internalID: -1622379526878323385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_9
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 436
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0616d532030499600800000000000000
+      internalID: 475481811160228192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_10
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 389
+        width: 14
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95585a8b32a8681b0800000000000000
+      internalID: -5654680396090735271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 445
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9932a4f7d89c6510800000000000000
+      internalID: 1543776825570900380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_12
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 437
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1027672cde0004910800000000000000
+      internalID: 1819455270627471873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_13
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 447
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f52eed7035fa400800000000000000
+      internalID: 337579790345330461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_14
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 434
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ce39ad5539eb920800000000000000
+      internalID: 3008003598078700639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_15
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 445
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036c9f64f30e5fd80800000000000000
+      internalID: -8217415382689266128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 441
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81f913d62f5f3010800000000000000
+      internalID: 1170759048494707082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_17
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 423
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed397546840b6c660800000000000000
+      internalID: 7405800462224954334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_18
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 417
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b9cf38078d3dae0800000000000000
+      internalID: -1525637870986159228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_19
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 396
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0cb6a230f636310800000000000000
+      internalID: 1397082368802275518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_20
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 345
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e33dd93318ed0c0800000000000000
+      internalID: -4549056514906440054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_21
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 410
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121f93514f26a0630800000000000000
+      internalID: 3894033628282876193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_22
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 390
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b028886a2244de20800000000000000
+      internalID: 3374394770717155511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_23
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 385
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eea454680602a5e0800000000000000
+      internalID: -1899949459684151575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_24
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 361
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c6f68e9f5e05750800000000000000
+      internalID: 6291781540945816597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_25
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 318
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e75dae4be5f17990800000000000000
+      internalID: -7389855122552170522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_26
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 281
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8508f037a772ed0800000000000000
+      internalID: -2438846038597936960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_27
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 310
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80e00bedca4cba40800000000000000
+      internalID: 5385261502699724939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_28
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 297
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a40fc16367c5933c0800000000000000
+      internalID: -4379367499857334198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_29
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 261
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac25c3c0cb0bd3e0800000000000000
+      internalID: -2028014284654170967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 239
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22899455a47d81f20800000000000000
+      internalID: 3393699033482106914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_31
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 253
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e45cb7c20e3db700800000000000000
+      internalID: 557670110525674722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_32
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 212
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a7113cb27dbf6e0800000000000000
+      internalID: -1802610642875483633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_33
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 216
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2510ae8900399f70800000000000000
+      internalID: 9194432931859273006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_34
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 218
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8402e2e3ce090420800000000000000
+      internalID: 2596622894643676302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_35
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 196
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95e163e19743ba30800000000000000
+      internalID: 4229803166941701530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 185
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5ca43a54f6d1eb0800000000000000
+      internalID: -4747516087295621711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 173
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3526b4dfceb3ab0800000000000000
+      internalID: -5027163986393410650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_38
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 135
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44490f0ccfe5ad0b0800000000000000
+      internalID: -5703141538449550268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 153
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5b9153e453f6d70800000000000000
+      internalID: 9038501587170473379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_40
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 161
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b718d37e71c11d390800000000000000
+      internalID: -7795418591012224645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_41
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 154
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8e58baa51a993a0800000000000000
+      internalID: -6658113163293759304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_42
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 108
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d62c0a19b992370800000000000000
+      internalID: 8298334838176509266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fOJIcY-blood-splatter-picture_43
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 87
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d594419c1824cb0800000000000000
+      internalID: -4881196345487434363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fOJIcY-blood-splatter-picture_0: -8145287671494754193
+      fOJIcY-blood-splatter-picture_1: 1856887062476763164
+      fOJIcY-blood-splatter-picture_10: -5654680396090735271
+      fOJIcY-blood-splatter-picture_11: 1543776825570900380
+      fOJIcY-blood-splatter-picture_12: 1819455270627471873
+      fOJIcY-blood-splatter-picture_13: 337579790345330461
+      fOJIcY-blood-splatter-picture_14: 3008003598078700639
+      fOJIcY-blood-splatter-picture_15: -8217415382689266128
+      fOJIcY-blood-splatter-picture_16: 1170759048494707082
+      fOJIcY-blood-splatter-picture_17: 7405800462224954334
+      fOJIcY-blood-splatter-picture_18: -1525637870986159228
+      fOJIcY-blood-splatter-picture_19: 1397082368802275518
+      fOJIcY-blood-splatter-picture_2: 2952705441349443115
+      fOJIcY-blood-splatter-picture_20: -4549056514906440054
+      fOJIcY-blood-splatter-picture_21: 3894033628282876193
+      fOJIcY-blood-splatter-picture_22: 3374394770717155511
+      fOJIcY-blood-splatter-picture_23: -1899949459684151575
+      fOJIcY-blood-splatter-picture_24: 6291781540945816597
+      fOJIcY-blood-splatter-picture_25: -7389855122552170522
+      fOJIcY-blood-splatter-picture_26: -2438846038597936960
+      fOJIcY-blood-splatter-picture_27: 5385261502699724939
+      fOJIcY-blood-splatter-picture_28: -4379367499857334198
+      fOJIcY-blood-splatter-picture_29: -2028014284654170967
+      fOJIcY-blood-splatter-picture_3: 1160662312314187312
+      fOJIcY-blood-splatter-picture_30: 3393699033482106914
+      fOJIcY-blood-splatter-picture_31: 557670110525674722
+      fOJIcY-blood-splatter-picture_32: -1802610642875483633
+      fOJIcY-blood-splatter-picture_33: 9194432931859273006
+      fOJIcY-blood-splatter-picture_34: 2596622894643676302
+      fOJIcY-blood-splatter-picture_35: 4229803166941701530
+      fOJIcY-blood-splatter-picture_36: -4747516087295621711
+      fOJIcY-blood-splatter-picture_37: -5027163986393410650
+      fOJIcY-blood-splatter-picture_38: -5703141538449550268
+      fOJIcY-blood-splatter-picture_39: 9038501587170473379
+      fOJIcY-blood-splatter-picture_4: 3974512375083706116
+      fOJIcY-blood-splatter-picture_40: -7795418591012224645
+      fOJIcY-blood-splatter-picture_41: -6658113163293759304
+      fOJIcY-blood-splatter-picture_42: 8298334838176509266
+      fOJIcY-blood-splatter-picture_43: -4881196345487434363
+      fOJIcY-blood-splatter-picture_5: 328866858957253314
+      fOJIcY-blood-splatter-picture_6: 6893955409988976273
+      fOJIcY-blood-splatter-picture_7: 74273911611865765
+      fOJIcY-blood-splatter-picture_8: -1622379526878323385
+      fOJIcY-blood-splatter-picture_9: 475481811160228192
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

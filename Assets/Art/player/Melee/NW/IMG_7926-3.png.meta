@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 1f4eab72b1722904e9c76b1bbce91826
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1268644419684440228
+    second: IMG_7926-3_0
+  - first:
+      213: 5380847630808179541
+    second: IMG_7926-3_1
+  - first:
+      213: 8279602960941121420
+    second: IMG_7926-3_2
+  - first:
+      213: -8878661881633586308
+    second: IMG_7926-3_3
+  - first:
+      213: 7165140418518325060
+    second: IMG_7926-3_4
+  - first:
+      213: -7493305198593490370
+    second: IMG_7926-3_5
+  - first:
+      213: -8331046032574959048
+    second: IMG_7926-3_6
+  - first:
+      213: 8231843931961671814
+    second: IMG_7926-3_7
+  - first:
+      213: -6303717040523020484
+    second: IMG_7926-3_8
+  - first:
+      213: -738856926615755855
+    second: IMG_7926-3_9
+  - first:
+      213: -3370029165538026318
+    second: IMG_7926-3_10
+  - first:
+      213: 7697656420207735695
+    second: IMG_7926-3_11
+  - first:
+      213: 3932212254326123640
+    second: IMG_7926-3_12
+  - first:
+      213: 280666074303942435
+    second: IMG_7926-3_13
+  - first:
+      213: 5366115930665699444
+    second: IMG_7926-3_14
+  - first:
+      213: -4469475869260533067
+    second: IMG_7926-3_15
+  - first:
+      213: 4743536283266624277
+    second: IMG_7926-3_16
+  - first:
+      213: -2442704814004034660
+    second: IMG_7926-3_17
+  - first:
+      213: 354358708515380082
+    second: IMG_7926-3_18
+  - first:
+      213: 3462697845302189466
+    second: IMG_7926-3_19
+  - first:
+      213: 3062001664674830422
+    second: IMG_7926-3_20
+  - first:
+      213: 4847076905926664209
+    second: IMG_7926-3_21
+  - first:
+      213: -5514989198942834566
+    second: IMG_7926-3_22
+  - first:
+      213: 9172636299595582097
+    second: IMG_7926-3_23
+  - first:
+      213: -5744249356402859634
+    second: IMG_7926-3_24
+  - first:
+      213: -5864712483531532919
+    second: IMG_7926-3_25
+  - first:
+      213: 6915644886539640233
+    second: IMG_7926-3_26
+  - first:
+      213: 1031349104957636932
+    second: IMG_7926-3_27
+  - first:
+      213: -859898510227897859
+    second: IMG_7926-3_28
+  - first:
+      213: -7274926393955131103
+    second: IMG_7926-3_29
+  - first:
+      213: 4373467157350112932
+    second: IMG_7926-3_30
+  - first:
+      213: -4944604927732310857
+    second: IMG_7926-3_31
+  - first:
+      213: -484469206023464686
+    second: IMG_7926-3_32
+  - first:
+      213: -2292354745268844397
+    second: IMG_7926-3_33
+  - first:
+      213: 6325505554255536500
+    second: IMG_7926-3_34
+  - first:
+      213: -1840832963684002393
+    second: IMG_7926-3_35
+  - first:
+      213: -912323830691605650
+    second: IMG_7926-3_36
+  - first:
+      213: -9213126796134268232
+    second: IMG_7926-3_37
+  - first:
+      213: 9106594177399674184
+    second: IMG_7926-3_38
+  - first:
+      213: 8098603833414754359
+    second: IMG_7926-3_39
+  - first:
+      213: 8531498106015651327
+    second: IMG_7926-3_40
+  - first:
+      213: -7514679973290538668
+    second: IMG_7926-3_41
+  - first:
+      213: -8828847492105108800
+    second: IMG_7926-3_42
+  - first:
+      213: -1201736517902671044
+    second: IMG_7926-3_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IMG_7926-3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2937
+        height: 3238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8929dc0612b9110800000000000000
+      internalID: 1268644419684440228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 60f328f21a2df0d48b815c71fad77f6c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2937.0,"y":3238.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      IMG_7926-3_0: 1268644419684440228
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

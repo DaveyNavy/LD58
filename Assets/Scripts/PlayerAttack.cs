@@ -66,6 +66,15 @@ public class PlayerAttack : MonoBehaviour
         {
             animator.SetBool("IsSpinAttack", false);
         }
+        if (_attackPoundTimer == 0)
+        {
+            animator.SetBool("IsGroundPound", false);
+        }
+        if (_attackTimer == 0)
+        {
+            animator.SetBool("IsAttack", false);
+        }
+
     }
 
     public void OnAttack()
@@ -102,6 +111,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
+        animator.SetBool("IsAttack", true);
         _chargeUpSource.Play();
         PlayerStats.Instance.limbDecay();
         _facing = _player.Facing;
@@ -128,6 +138,8 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundTimer = AttackPoundCD;
         _chargeUpSource.Play();
         Debug.Log("Player Attack Pound!");
+        animator.SetBool("IsGroundPound", true);
+
         PlayerStats.Instance.limbDecay();
         PlayerStats.Instance.player.Speed = 0;
         _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 5 : 20;
