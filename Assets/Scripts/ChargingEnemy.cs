@@ -98,7 +98,7 @@ public class ChargingEnemy : Enemy
 
     private IEnumerator ChargeAttack()
     {
-        _attackAnimTimer = 150;
+        _attackAnimTimer = 40;
         _rb.linearVelocity = Vector2.zero;
 
         speed = 0;
@@ -126,7 +126,7 @@ public class ChargingEnemy : Enemy
         lineRenderer2.enabled = true;
 
         // Calculate hook pattern: first force is diagonal, second force is toward player
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             while (Time.timeScale == 0f)
                 yield return null;

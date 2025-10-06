@@ -32,6 +32,8 @@ public class BossEnemy : Damagable
         lineRenderer.positionCount = 2;
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
 
         // Assign a material (required)
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
@@ -109,7 +111,7 @@ public class BossEnemy : Damagable
         animator.SetBool("IsSpinning", true);
 
 
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 50; i++)
         {
             while (Time.timeScale == 0f)
                 yield return null;
@@ -118,30 +120,20 @@ public class BossEnemy : Damagable
         }
         lineRenderer.enabled = false;
 
-        Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
+        GameObject spin = Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity);
+        spin.transform.parent = transform;
 
-        speed = originalSpeed * 60;
-        Vector2 desiredVelocity = directionToPlayer * speed;
-        Vector2 currentVelocity = _rb.linearVelocity;
-        Vector2 velocityChange = desiredVelocity - currentVelocity;
+        _rb.AddForce(directionToPlayer * 150f, ForceMode2D.Impulse);
 
-        for (int i = 0; i < 30; i++)
-        {
-            while (Time.timeScale == 0f)
-                yield return null;
-            _rb.AddForce(velocityChange, ForceMode2D.Force);
-            yield return new WaitForFixedUpdate();
-        }
-        animator.SetBool("IsSpinning", false);
-
-
-        speed = 0;
+        speed = originalSpeed * 5;
         for (int i = 0; i < 50; i++)
         {
             while (Time.timeScale == 0f)
                 yield return null;
+
             yield return new WaitForFixedUpdate();
         }
+        animator.SetBool("IsSpinning", false);
         speed = originalSpeed;
     }
 
