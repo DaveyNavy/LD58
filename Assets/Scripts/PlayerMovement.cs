@@ -95,6 +95,8 @@ public class PlayerMovement : Damagable
 
     public override void OnDeath()
     {
+        base.OnDeath();
+
         Debug.Log("Player Died!");
         Destroy(gameObject);
     }
