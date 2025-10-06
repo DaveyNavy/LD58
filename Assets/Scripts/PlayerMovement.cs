@@ -95,9 +95,21 @@ public class PlayerMovement : Damagable
 
     public override void OnDeath()
     {
-        base.OnDeath();
+        ParticleSystem vfx = Instantiate(PlayerStats.Instance.deathvfx, transform.position, Quaternion.identity);
+        vfx.transform.localScale = transform.localScale / 2f;
+        vfx.Play();
 
         Debug.Log("Player Died!");
-        Destroy(gameObject);
+        GetComponent<Collider2D>().enabled = false;
+        Time.timeScale = 0.5f;
+    }
+
+    public void OnRespawn()
+    {
+        GetComponent<Collider2D>().enabled = true;
+        PlayerStats.Instance.limbs -= 1;
+        PlayerStats.Instance.RepairLimb();
+        PlayerStats.Instance.player.Heal(1);
+        PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position;
     }
 }

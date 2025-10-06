@@ -15,6 +15,10 @@ public class BigDaddy : Damagable
         popup.alpha = 0f;
         popup2.alpha = 0f;
     }
+    private void Start()
+    {
+        PlayerStats.Instance.bigDaddy = this;
+    }
     private void FixedUpdate()
     {
         // Text:

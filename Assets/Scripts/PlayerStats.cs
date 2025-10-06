@@ -20,6 +20,8 @@ public class PlayerStats : MonoBehaviour
     public ParticleSystem hitvfx;
     public ParticleSystem deathvfx;
 
+    public BigDaddy bigDaddy;
+
     private void Awake()
     {
         if (Instance == null)
