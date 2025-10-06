@@ -72,11 +72,11 @@ public class PlayerStats : MonoBehaviour
         }
         else if (DaddyFlesh > 10) // 10 -> 50
         {
-            daddyStatusText.text = "Big Daddy is Sad! (" + (50 - DaddyFlesh) + " more flesh needed)";
+            daddyStatusText.text = "Big Daddy is Hungry! (" + (50 - DaddyFlesh) + " more flesh needed)";
         }
         else // 0 -> 10
         {
-            daddyStatusText.text = "Big Daddy is grief-stricken! (" + (50 - DaddyFlesh) + " more flesh needed)";
+            daddyStatusText.text = "Big Daddy needs flesh bad! (" + (50 - DaddyFlesh) + " more flesh needed)";
         }
     }
 

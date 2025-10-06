@@ -33,6 +33,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip cutscene1;
     public AudioClip misc1;
     public AudioClip misc2;
+    public AudioClip liminal1;
 
 
     private AudioSource ambienceSource;
@@ -57,6 +58,9 @@ public class SoundManager : MonoBehaviour
 
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.playOnAwake = false;
+
+        //
+        PlayAmbience(liminal1, 0.2f, 0.6f);
     }
 
     public void PlayOneShot(AudioClip clip, float volume = 1f, float pitch = 1f)
@@ -69,12 +73,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayAmbience(AudioClip clip, float volume = 1f, bool loop = true)
+    public void PlayAmbience(AudioClip clip, float volume = 1f, float pitch = 1f, bool loop = true)
     {
         if (clip != null)
         {
             ambienceSource.clip = clip;
             ambienceSource.volume = volume;
+            ambienceSource.pitch = pitch;
             ambienceSource.loop = loop;
             ambienceSource.Play();
         }
@@ -85,11 +90,13 @@ public class SoundManager : MonoBehaviour
         ambienceSource.Stop();
     }
 
-    public static AudioSource PlayOnAudioSource(Transform target, AudioClip clip)
+    public static AudioSource PlayOnAudioSource(Transform target, AudioClip clip, bool play = true)
     {
         if (target == null || clip == null) return null;
         AudioSource source = target.gameObject.AddComponent<AudioSource>();
         source.clip = clip;
+        if (play)
+            source.Play();
 
         return source;
     }

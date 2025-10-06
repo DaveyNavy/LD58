@@ -14,6 +14,9 @@ public class PlayerMovement : Damagable
     public PlayerAttack Attack;
     public GameObject GameOverCanvas;
     private Animator animator;
+    private AudioSource heartbeatSource;
+    private AudioSource footstepSource1;
+    private AudioSource footstepSource2;
 
     protected override void Awake()
     {
@@ -22,6 +25,18 @@ public class PlayerMovement : Damagable
         Attack = GetComponent<PlayerAttack>();
         _mainCamera = Camera.main;
         animator = GetComponent<Animator>();
+
+        heartbeatSource = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.heartbeat1);
+        heartbeatSource.loop = true;
+        heartbeatSource.volume = 0.3f;
+
+        footstepSource1 = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk1, false);
+        footstepSource1.loop = true;
+        footstepSource1.volume = 0.3f;
+
+        footstepSource2 = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.walk2, false);
+        footstepSource2.loop = true;
+        footstepSource2.volume = 0.3f;
     }
 
     public void OnMove(InputValue value)
@@ -33,7 +48,13 @@ public class PlayerMovement : Damagable
             Facing = MoveInput.normalized;
             animator.SetFloat("MoveX", Facing.x);
             animator.SetFloat("MoveY", Facing.y);
-            Debug.Log(Facing.x);
+            footstepSource1.Play();
+            footstepSource2.Play();
+        }
+        else
+        {
+            footstepSource1.Stop();
+            footstepSource2.Stop();
         }
     }
 
@@ -70,6 +91,20 @@ public class PlayerMovement : Damagable
             targetPosition,
             0.1f // Smooth factor, adjust as needed
         );
+
+        // Update heartbeat sound based on health:
+        float healthRatio = (float)_curHealth / _maxHealth;
+        if (healthRatio >= 0.5f)
+        {
+            heartbeatSource.volume = 0.3f;
+        }
+        else
+        {
+            // Lerp from 0.3f to 1f as healthRatio goes from 0.5 to 0
+            float t = 1f - (healthRatio / 0.4f); // t = 0 at 0.5, t = 1 at 0
+            heartbeatSource.volume = Mathf.Lerp(0.5f, 1f, t);
+            heartbeatSource.pitch = Mathf.Lerp(1f, 2f, t);
+        }
     }
 
     void OnHoldComplete()

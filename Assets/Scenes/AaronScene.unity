@@ -431,6 +431,7 @@ MonoBehaviour:
   cutscene1: {fileID: 8300000, guid: e6b4c5a047afae940b6c6264a10d72eb, type: 3}
   misc1: {fileID: 8300000, guid: 211a38901441b5240a8ec265078b6dd3, type: 3}
   misc2: {fileID: 8300000, guid: c84e330ce55b48b4f96eb67ff49dc638, type: 3}
+  liminal1: {fileID: 8300000, guid: 850d0a9abbcb6a94b8a183fa26787f08, type: 3}
 --- !u!4 &1514732064
 Transform:
   m_ObjectHideFlags: 0
