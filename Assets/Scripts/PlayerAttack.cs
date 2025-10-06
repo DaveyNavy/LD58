@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         _player = GetComponent<PlayerMovement>();
-        _speed = PlayerStats.Instance.player.Speed;
+        _speed = 10f;
         animator = GetComponent<Animator>();
         _chargeUpSource = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, false);
         _chargeUpSource.volume = 1f;
@@ -52,6 +52,8 @@ public class PlayerAttack : MonoBehaviour
         if (_attackAnimTimer == 1)
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing, 1.5f), GetSpawnRot(_facing));
+            Debug.Log("Speed" + _speed);
+
             PlayerStats.Instance.player.Speed = _speed;
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.attack2, 0.7f);
             _chargeUpSource.Stop();
@@ -75,6 +77,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer == 0)
         {
             animator.SetBool("IsAttack", false);
+            PlayerStats.Instance.player.Speed = _speed;
         }
 
     }

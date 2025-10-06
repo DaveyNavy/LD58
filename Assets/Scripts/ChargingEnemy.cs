@@ -148,7 +148,7 @@ public class ChargingEnemy : Enemy
         lineRenderer2.enabled = false;
 
         // First force: diagonal
-        _rb.AddForce(diagonalComponent1 * 200);
+        _rb.AddForce(diagonalComponent1 * 100);
         animator.SetFloat("MoveX", diagonalComponent1.x);
         animator.SetFloat("MoveY", diagonalComponent1.y);
 
@@ -161,7 +161,7 @@ public class ChargingEnemy : Enemy
 
         // Second force: direct to player
         _rb.linearVelocity = Vector3.zero;
-        _rb.AddForce(diagonalComponent2 * 400);
+        _rb.AddForce(diagonalComponent2 * 200);
         animator.SetFloat("MoveX", diagonalComponent2.x);
         animator.SetFloat("MoveY", diagonalComponent2.y);
 
