@@ -54,6 +54,12 @@ public class BossEnemy : Damagable
     private void FixedUpdate()
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
+
+        if (aoeTimer < aoeCooldown - 60)
+        {
+            animator.SetBool("IsAttacking", false);
+        }
+
         if (aoeTimer == 0 && inRange)
         {
             if (Random.value < 0.6f)
@@ -73,6 +79,7 @@ public class BossEnemy : Damagable
 
     private void Daddy1()
     {
+        animator.SetBool("IsAttacking", true);
         Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
         Vector3 spawnPos = transform.position + directionToPlayer * 4f;
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90f;

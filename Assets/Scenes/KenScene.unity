@@ -9176,6 +9176,10 @@ PrefabInstance:
       propertyPath: Speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2899584953301846489, guid: 6d81791994fd9cf4790cb59c45ddc6ca, type: 3}
+      propertyPath: _maxHealth
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 3071467753614548212, guid: 6d81791994fd9cf4790cb59c45ddc6ca, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -9869,6 +9873,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311059757}
   m_CullTransparentMesh: 1
+--- !u!1 &1395026345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 631876022649773723, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+  m_PrefabInstance: {fileID: 1619707737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1395026351
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395026345}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0252a62a91758440b009b3ea8303212, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1395183352
 GameObject:
   m_ObjectHideFlags: 0
@@ -10834,25 +10865,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: homunculus_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182788452260312441, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182788452260312441, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182788452260312441, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2367978755482114783, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156565195809822902, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2642344
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4156565195809822902, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2642344
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4156565195809822902, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2642344
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4156565195809822902, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.98
+      value: 17.28
       objectReference: {fileID: 0}
     - target: {fileID: 4156565195809822902, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10890,10 +10933,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4857916267244065643, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9031541344869709189, guid: 491c0d48159ac92469f27e031746c0bc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 631876022649773723, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1395026351}
   m_SourcePrefab: {fileID: 100100000, guid: f6c5c84ee83354a4082d6932c0ffb93e, type: 3}
 --- !u!1 &1639566928
 GameObject:

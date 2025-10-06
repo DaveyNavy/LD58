@@ -138,12 +138,12 @@ MonoBehaviour:
   _curHealth: 0
   IsPlayer: 0
   _fleshDrops: 10
-  _contactDamage: 0
+  _contactDamage: 20
   _contactDamageGiveKB: 0
   _contactDamageTakeKB: 0
   knockbackImmune: 0
   strafeDistance: 3
-  speed: 1
+  speed: 3
   aoeCooldown: 200
   bossAttackPrefab: {fileID: 232801986427644394, guid: bb8581f740f19494e822d03935959774, type: 3}
   bossAttack2Prefab: {fileID: 232801986427644394, guid: 014f74227e8c14b41aafaba4d3fcca2a, type: 3}
