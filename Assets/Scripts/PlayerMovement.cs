@@ -18,6 +18,11 @@ public class PlayerMovement : Damagable
     private AudioSource footstepSource1;
     private AudioSource footstepSource2;
 
+    public AnimatorOverrideController twoLimbsAnimator;
+    public AnimatorOverrideController threeLimbsAnimator;
+    public AnimatorOverrideController fourLimbsAnimator;
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -67,6 +72,18 @@ public class PlayerMovement : Damagable
 
     void Update()
     {
+        if (PlayerStats.Instance.limbs == 2)
+        {
+            animator.runtimeAnimatorController = twoLimbsAnimator;
+        }
+        else if (PlayerStats.Instance.limbs == 3)
+        {
+            animator.runtimeAnimatorController = threeLimbsAnimator;
+
+        }
+        else if (PlayerStats.Instance.limbs == 4) {
+            animator.runtimeAnimatorController = fourLimbsAnimator;
+        }
         if (Input.GetKey(key))
         {
             Speed = 0;
