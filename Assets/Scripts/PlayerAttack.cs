@@ -20,11 +20,12 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement _player;
     private float _speed;
     private Vector2 _facing;
-
+    private Animator animator;
     private void Awake()
     {
         _player = GetComponent<PlayerMovement>();
         _speed = PlayerStats.Instance.player.Speed;
+        animator = GetComponent<Animator>();
     }
     public void ResetCooldowns()
     {
@@ -51,6 +52,11 @@ public class PlayerAttack : MonoBehaviour
         {
             Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
             PlayerStats.Instance.player.Speed = _speed;
+        }
+
+        if (_attackSpinTimer == 0)
+        {
+            animator.SetBool("IsSpinAttack", false);
         }
     }
 
@@ -122,6 +128,7 @@ public class PlayerAttack : MonoBehaviour
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
         PlayerStats.Instance.limbDecay();
+        animator.SetBool("IsSpinAttack", true);
         Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
     }
 
