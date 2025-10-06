@@ -14,8 +14,6 @@ public class ShortRangeEnemy : Enemy
 
     private int _attackRange = 3;
 
-    private Rigidbody2D rb;
-
     private int originalSpeed;
 
     protected override void Awake()
@@ -27,12 +25,11 @@ public class ShortRangeEnemy : Enemy
     protected override void Update()
     {
         base.Update();
-        rb = GetComponent<Rigidbody2D>();
         if (_attackAnimTimer <= 0)
         {
             speed = originalSpeed;
+            animator.SetBool("IsAttacking", false);
         }
-
         Attack();
     }
 
@@ -57,6 +54,7 @@ public class ShortRangeEnemy : Enemy
 
     private IEnumerator SpawnWindupThenAttack()
     {
+        animator.SetBool("IsAttacking", true);
         Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
 
         Vector3 spawnPos = transform.position + directionToPlayer * spawnDistance;
