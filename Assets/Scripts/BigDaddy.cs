@@ -35,6 +35,12 @@ public class BigDaddy : Damagable
             popup.alpha = Mathf.Max(0f, popup.alpha - 0.05f);
             popup2.alpha = popup.alpha;
         }
+
+        inRange = distance < 10f;
+        if (inRange)
+        {
+            PlayerStats.Instance.player.Heal(1);
+        }
     }
 
     public override bool TakeDamage(int amount)

@@ -109,7 +109,7 @@ public class PlayerMovement : Damagable
     public void OnRespawn()
     {
         GetComponent<Collider2D>().enabled = true;
-        Time.timeScale = 0.5f;
+        Time.timeScale = 1f;
         PlayerStats.Instance.limbs -= 1;
         PlayerStats.Instance.RepairLimb();
         PlayerStats.Instance.player.Heal(1);
