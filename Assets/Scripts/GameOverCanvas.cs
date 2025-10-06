@@ -15,6 +15,15 @@ public class GameOverCanvas : MonoBehaviour
         _canvasGroup = GetComponent<CanvasGroup>();
     }
 
+    private void FixedUpdate()
+    {
+        if (PlayerStats.Instance.IsGameOver)
+        {
+            _continueButton.SetActive(false);
+            _thanksForPlaying.SetActive(true);
+        }
+    }
+
     public void Show(float duration = 0.5f)
     {
         StartCoroutine(FadeCanvasGroup(_canvasGroup, _canvasGroup.alpha, 1f, duration));

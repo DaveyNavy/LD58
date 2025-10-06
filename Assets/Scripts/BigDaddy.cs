@@ -52,7 +52,7 @@ public class BigDaddy : Damagable
         // Move up if triggered
         if (_moveUp)
         {
-            transform.position += new Vector3(0f, 0.2f, 0f);
+            transform.position += new Vector3(0f, 0.02f, 0f);
         }
     }
 
@@ -66,27 +66,34 @@ public class BigDaddy : Damagable
         PlayerStats.Instance.player.Attack.ResetCooldowns();
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.feed1, 0.7f, 2f);
         GetComponent<Collider2D>().enabled = false;
-        StartCoroutine(EndGame());
+
+        if (PlayerStats.Instance.DaddyFlesh >= 200)
+        {
+            PlayerStats.Instance.DaddyFlesh = 200;
+            StartCoroutine(EndGame());
+        }
         return true;
     }
 
     private IEnumerator EndGame()
     {
+        PlayerStats.Instance.player.Speed = 0.5f;
+
         popup.text = "";
         popup2.text = "";
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.cutscene1, 0.7f, 2f);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         popup.text = "thanks bro";
         popup2.text = "ima head out now";
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         // Start moving up 0.2 units per FixedUpdate
         _moveUp = true;
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(8f);
 
         // Instantiate a boss at each spawn point
         foreach (var spawn in spawns)
