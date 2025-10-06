@@ -24,7 +24,11 @@ public class PlayerStats : MonoBehaviour
 
         player = GetComponent<PlayerMovement>();
 
-        daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
+        GameObject canvas = GameObject.Find("Canvas");
+        if (canvas != null)
+        {
+            daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
+        }
     }
 
     private float daddyFleshDecayTimer = 0f;
@@ -32,6 +36,22 @@ public class PlayerStats : MonoBehaviour
     private void Update()
     {
         playerTransform = transform.position;
+
+        // Daddy flesh decay (1 flesh every second)
+        daddyFleshDecayTimer += Time.deltaTime;
+        if (daddyFleshDecayTimer >= 2f)
+        {
+            DaddyFlesh = Math.Max(0, DaddyFlesh - 1);
+            daddyFleshDecayTimer = 0f;
+
+            // Daddy buffs:
+            if (DaddyFlesh < 10)
+            {
+                player.TakeDamage(1);
+            }
+        }
+
+        if (daddyStatusText == null) return;
 
         if (DaddyFlesh >= 150) // 150+
         {
@@ -52,20 +72,6 @@ public class PlayerStats : MonoBehaviour
         else // 0 -> 10
         {
             daddyStatusText.text = "Big Daddy is grief-stricken! (" + (50 - DaddyFlesh) + " more flesh needed)";
-        }
-
-        // Daddy flesh decay (1 flesh every second)
-        daddyFleshDecayTimer += Time.deltaTime;
-        if (daddyFleshDecayTimer >= 2f)
-        {
-            DaddyFlesh = Math.Max(0, DaddyFlesh - 1);
-            daddyFleshDecayTimer = 0f;
-
-            // Daddy buffs:
-            if (DaddyFlesh < 10)
-            {
-                player.TakeDamage(1);
-            }
         }
     }
 
