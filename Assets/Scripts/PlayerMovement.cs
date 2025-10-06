@@ -13,6 +13,7 @@ public class PlayerMovement : Damagable
     public Vector2 Facing = Vector2.right;
     public PlayerAttack Attack;
     public GameObject GameOverCanvas;
+    private Animator animator;
 
     protected override void Awake()
     {
@@ -20,13 +21,20 @@ public class PlayerMovement : Damagable
         Rigidbody = GetComponent<Rigidbody2D>();
         Attack = GetComponent<PlayerAttack>();
         _mainCamera = Camera.main;
+        animator = GetComponent<Animator>();
     }
 
     public void OnMove(InputValue value)
     {
         MoveInput = value.Get<Vector2>();
+
         if (MoveInput != Vector2.zero)
+        {
             Facing = MoveInput.normalized;
+            animator.SetFloat("MoveX", Facing.x);
+            animator.SetFloat("MoveY", Facing.y);
+            Debug.Log(Facing.x);
+        }
     }
 
 
@@ -63,12 +71,12 @@ public class PlayerMovement : Damagable
             0.1f // Smooth factor, adjust as needed
         );
 
-        // Rotate sprite based on Facing direction
-        if (Facing != Vector2.zero)
-        {
-            float angle = Mathf.Atan2(Facing.y, Facing.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        }
+        //// Rotate sprite based on Facing direction
+        //if (Facing != Vector2.zero)
+        //{
+        //    float angle = Mathf.Atan2(Facing.y, Facing.x) * Mathf.Rad2Deg;
+        //    transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        //}
     }
 
     void OnHoldComplete()
