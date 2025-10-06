@@ -41,8 +41,12 @@ public class Enemy : Damagable
         Vector2 currentVelocity = _rb.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         _rb.AddForce(velocityChange, ForceMode2D.Force);
-        animator.SetFloat("MoveX", direction.x);
-        animator.SetFloat("MoveY", direction.y);
+
+        if (animator.parameters.Length != 0)
+        {
+            animator.SetFloat("MoveX", direction.x);
+            animator.SetFloat("MoveY", direction.y);
+        }
     }
 
     bool IsSpriteOnScreen()
