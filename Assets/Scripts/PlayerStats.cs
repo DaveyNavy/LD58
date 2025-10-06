@@ -29,11 +29,11 @@ public class PlayerStats : MonoBehaviour
 
         player = GetComponent<PlayerMovement>();
 
-        GameObject canvas = GameObject.Find("Canvas");
-        if (canvas != null)
-        {
-            daddyStatusText = GameObject.Find("Canvas").transform.Find("GameUI").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
-        }
+        //GameObject canvas = GameObject.Find("Canvas");
+        //if (canvas != null)
+        //{
+        //    daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
+        //}
     }
 
     private float daddyFleshDecayTimer = 0f;
