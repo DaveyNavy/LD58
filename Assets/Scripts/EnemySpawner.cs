@@ -3,49 +3,41 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;       // Enemy prefab to spawn
-    public Transform[] spawnPoints;      // Positions to spawn from
-    public int enemiesPerWave = 5;       // How many enemies per wave
-    public float timeBetweenEnemies = 1f;
-    public float timeBetweenWaves = 5f;
-    public int totalWaves = 3;
+    public int difficulty;
 
-    private int currentWave = 0;
-
-    private void Start()
+    private int[,] enemySpawns =
     {
-        StartCoroutine(SpawnWaves());
+        { 3, 1, 0, 0, 0 },
+        { 5, 7, 0, 0, 0 },
+        { 5, 4, 3, 0, 0 },
+        { 8, 8, 2, 3, 0 },
+        { 8, 9, 4, 2, 1 }
+    };
+
+    public GameObject[] enemies;
+
+    private void Awake()
+    {
+        Spawn();
     }
 
-    IEnumerator SpawnWaves()
+    private void Spawn()
     {
-        while (currentWave < totalWaves)
+        for (int i = 0; i < 5; i++)
         {
-            currentWave++;
-            Debug.Log($"Starting Wave {currentWave}");
+            for (int j = 0; j < enemySpawns[difficulty, i];  j++)
+            {
+                Vector3 spawnPos = transform.position;
+                GameObject enemy = Instantiate(enemies[i], spawnPos, Quaternion.identity);
 
-            yield return StartCoroutine(SpawnSingleWave());
-
-            Debug.Log($"Wave {currentWave} complete");
-            yield return new WaitForSeconds(timeBetweenWaves);
+                Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    Vector2 randomDir = Random.insideUnitCircle.normalized;
+                    float randomSpeed = Random.Range(4, 20);
+                    rb.linearVelocity = randomDir * randomSpeed;
+                }
+            }
         }
-
-        Debug.Log("All waves complete!");
-    }
-
-    IEnumerator SpawnSingleWave()
-    {
-        for (int i = 0; i < enemiesPerWave; i++)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(timeBetweenEnemies);
-        }
-    }
-
-    void SpawnEnemy()
-    {
-        // Pick a random spawn point if multiple
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
     }
 }
