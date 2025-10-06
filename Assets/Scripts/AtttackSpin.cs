@@ -17,6 +17,8 @@ public class AttackSpin : MonoBehaviour
     {
         _lifetimeTimer = Mathf.Max(0, _lifetimeTimer - 1);
         if (_lifetimeTimer <= 0) Destroy(gameObject);
+
+        transform.GetChild(0).Rotate(0, 0, 30);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -15,7 +15,11 @@ public class Attack : MonoBehaviour
     private void FixedUpdate()
     {
         _lifetimeTimer = Mathf.Max(0, _lifetimeTimer - 1);
-        if (_lifetimeTimer <= 0) Destroy(gameObject);
+        if (_lifetimeTimer <= 0)
+        {
+            Destroy(gameObject, 5f);
+            GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
