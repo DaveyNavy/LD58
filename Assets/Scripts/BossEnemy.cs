@@ -21,7 +21,7 @@ public class BossEnemy : Damagable
     private int originalSpeed;
 
 
-
+    private Animator animator;
 
     void Start()
     {
@@ -38,6 +38,8 @@ public class BossEnemy : Damagable
         lineRenderer.enabled = false;
 
         originalSpeed = speed;
+
+        animator = GetComponent<Animator>();
 
     }
 
@@ -97,6 +99,9 @@ public class BossEnemy : Damagable
         Vector3 directionToPlayer = (PlayerStats.Instance.playerTransform - transform.position).normalized;
 
         lineRenderer.enabled = true;
+        animator.SetBool("IsSpinning", true);
+
+
         for (int i = 0; i < 30; i++)
         {
             while (Time.timeScale == 0f)
@@ -107,7 +112,6 @@ public class BossEnemy : Damagable
         lineRenderer.enabled = false;
 
         Instantiate(bossAttack2Prefab, transform.position, Quaternion.identity, transform);
-
 
         speed = originalSpeed * 60;
         Vector2 desiredVelocity = directionToPlayer * speed;
@@ -121,6 +125,8 @@ public class BossEnemy : Damagable
             _rb.AddForce(velocityChange, ForceMode2D.Force);
             yield return new WaitForFixedUpdate();
         }
+        animator.SetBool("IsSpinning", false);
+
 
         speed = 0;
         for (int i = 0; i < 50; i++)
@@ -154,6 +160,8 @@ public class BossEnemy : Damagable
         Vector2 currentVelocity = _rb.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         _rb.AddForce(velocityChange, ForceMode2D.Force);
+        animator.SetFloat("MoveX", direction.x);
+        animator.SetFloat("MoveY", direction.y);
     }
 
     bool IsSpriteOnScreen()
