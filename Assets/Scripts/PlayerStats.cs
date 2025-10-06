@@ -114,6 +114,12 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void removeLimb()
+    {
+        limbs--;
+        nextLimbCost.text = "Flesh for next limb: " + GetCurrentLimbCost();
+    }
+
     public void AddLimb()
     {
         if (limbs < 4 && flesh >= GetCurrentLimbCost())

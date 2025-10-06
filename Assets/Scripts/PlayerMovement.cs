@@ -13,6 +13,7 @@ public class PlayerMovement : Damagable
     public Vector2 Facing = Vector2.right;
     public PlayerAttack Attack;
     public GameObject GameOverCanvas;
+    public GameObject EndCanvas;
     private Animator animator;
     private AudioSource heartbeatSource;
     private AudioSource footstepSource1;
@@ -187,7 +188,7 @@ public class PlayerMovement : Damagable
         else
         {
             // game won screen
-            GameObject.Find("EndCanvas").gameObject.SetActive(true);
+            EndCanvas.SetActive(true);
         }
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
@@ -203,9 +204,8 @@ public class PlayerMovement : Damagable
         Debug.Log(PlayerStats.Instance.limbs);
         if (PlayerStats.Instance.limbs > 1)
         {
-            PlayerStats.Instance.limbs--;
+            PlayerStats.Instance.removeLimb();
         }
-        Debug.Log(PlayerStats.Instance.limbs);
         PlayerStats.Instance.limbHealth = 100;
         PlayerStats.Instance.player.Heal(1);
         PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position + new Vector3(0, -5, 0);
