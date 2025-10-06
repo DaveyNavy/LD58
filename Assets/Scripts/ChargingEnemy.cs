@@ -137,6 +137,8 @@ public class ChargingEnemy : Enemy
 
         // First force: diagonal
         _rb.AddForce(diagonalComponent1 * 200);
+        animator.SetFloat("MoveX", diagonalComponent1.x);
+        animator.SetFloat("MoveY", diagonalComponent1.y);
 
         for (int i = 0; i < 15; i++)
         {
@@ -148,6 +150,8 @@ public class ChargingEnemy : Enemy
         // Second force: direct to player
         _rb.linearVelocity = Vector3.zero;
         _rb.AddForce(diagonalComponent2 * 200);
+        animator.SetFloat("MoveX", diagonalComponent2.x);
+        animator.SetFloat("MoveY", diagonalComponent2.y);
 
         speed = originalSpeed;
     }

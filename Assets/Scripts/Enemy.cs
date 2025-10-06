@@ -5,11 +5,12 @@ public class Enemy : Damagable
     private Renderer spriteRenderer;
     private Camera mainCamera;
     public int speed;
-
+    public Animator animator;
     protected virtual void Start()
     {
         spriteRenderer = GetComponent<Renderer>();
         mainCamera = Camera.main;
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void Update()
@@ -18,6 +19,7 @@ public class Enemy : Damagable
         {
             MoveTowardPlayer();
         }
+        
     }
 
     #region Effects
@@ -39,6 +41,8 @@ public class Enemy : Damagable
         Vector2 currentVelocity = _rb.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         _rb.AddForce(velocityChange, ForceMode2D.Force);
+        animator.SetFloat("MoveX", direction.x);
+        animator.SetFloat("MoveY", direction.y);
     }
 
     bool IsSpriteOnScreen()
