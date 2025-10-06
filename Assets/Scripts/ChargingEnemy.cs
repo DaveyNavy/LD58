@@ -115,6 +115,15 @@ public class ChargingEnemy : Enemy
         Vector2 diagonalComponent1 = projection1 * axis1;
         Vector2 diagonalComponent2 = projection2 * axis2;
 
+        // 50% to switch diagonalComponent1 and diagonalComponent2:
+        if (Random.value < 0.5f)
+        {
+            // Swap the diagonal components
+            var temp = diagonalComponent1;
+            diagonalComponent1 = diagonalComponent2;
+            diagonalComponent2 = temp;
+        }
+
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, transform.position + (Vector3)diagonalComponent1);
         lineRenderer.enabled = true;
@@ -147,7 +156,7 @@ public class ChargingEnemy : Enemy
 
         // Second force: direct to player
         _rb.linearVelocity = Vector3.zero;
-        _rb.AddForce(diagonalComponent2 * 200);
+        _rb.AddForce(diagonalComponent2 * 400);
         animator.SetFloat("MoveX", diagonalComponent2.x);
         animator.SetFloat("MoveY", diagonalComponent2.y);
 
