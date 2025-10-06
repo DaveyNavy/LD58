@@ -17,6 +17,9 @@ public class PlayerStats : MonoBehaviour
     public int DaddyFlesh = 75;
     public TextMeshProUGUI daddyStatusText;
 
+    public ParticleSystem hitvfx;
+    public ParticleSystem deathvfx;
+
     private void Awake()
     {
         if (Instance == null)

@@ -20,6 +20,9 @@ public class Damagable : MonoBehaviour
     public virtual bool TakeDamage(int amount)
     {
         _curHealth = Mathf.Max(_curHealth - amount, 0);
+        ParticleSystem vfx = Instantiate(PlayerStats.Instance.hitvfx, transform.position, Quaternion.identity);
+        vfx.transform.localScale = transform.localScale;
+        vfx.Play();
         bool isAlive = _curHealth > 0;
         if (!isAlive)
             OnDeath();
@@ -39,6 +42,9 @@ public class Damagable : MonoBehaviour
                 Instantiate(flesh, transform.position, Quaternion.identity);
             }
         }
+        ParticleSystem vfx = Instantiate(PlayerStats.Instance.deathvfx, transform.position, Quaternion.identity);
+        vfx.transform.localScale = transform.localScale / 2f;
+        vfx.Play();
         Destroy(gameObject);
     }
 
