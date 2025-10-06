@@ -176,6 +176,10 @@ public class PlayerMovement : Damagable
         GetComponent<Collider2D>().enabled = false;
         Time.timeScale = 0.5f;
         GameOverCanvas.SetActive(true);
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(enemy);
+        }
     }
 
     public void OnRespawn()
@@ -187,5 +191,10 @@ public class PlayerMovement : Damagable
         PlayerStats.Instance.RepairLimb();
         PlayerStats.Instance.player.Heal(1);
         PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position + new Vector3(0, -5, 0);
+        foreach (GameObject spawner in GameObject.FindGameObjectsWithTag("Spawner"))
+        {
+            EnemySpawner sp = spawner.GetComponent<EnemySpawner>();
+            sp.Spawn();
+        }
     }
 }

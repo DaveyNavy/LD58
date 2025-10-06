@@ -40,7 +40,7 @@ public class PlayerStats : MonoBehaviour
 
         // Daddy flesh decay (1 flesh every second)
         daddyFleshDecayTimer += Time.deltaTime;
-        if (daddyFleshDecayTimer >= 2f)
+        if (daddyFleshDecayTimer >= 5f)
         {
             DaddyFlesh = Math.Max(0, DaddyFlesh - 1);
             daddyFleshDecayTimer = 0f;
