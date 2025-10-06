@@ -24,6 +24,8 @@ public class PlayerStats : MonoBehaviour
 
     public BigDaddy bigDaddy;
 
+    public bool IsGameOver;
+
     private void Awake()
     {
         if (Instance == null)

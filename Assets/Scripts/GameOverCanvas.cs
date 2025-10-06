@@ -1,9 +1,14 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverCanvas : MonoBehaviour
 {
     private CanvasGroup _canvasGroup;
+
+    [SerializeField] private GameObject _continueButton;
+    [SerializeField] private GameObject _thanksForPlaying;
 
     private void Start()
     {
@@ -13,6 +18,12 @@ public class GameOverCanvas : MonoBehaviour
     public void Show(float duration = 0.5f)
     {
         StartCoroutine(FadeCanvasGroup(_canvasGroup, _canvasGroup.alpha, 1f, duration));
+
+        if (PlayerStats.Instance.IsGameOver)
+        {
+            _continueButton.SetActive(false);
+            _thanksForPlaying.SetActive(true);
+        }
     }
 
     public void Hide(float duration = 0.5f)
