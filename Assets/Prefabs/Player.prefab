@@ -9930,7 +9930,7 @@ MonoBehaviour:
   flesh: {fileID: 0}
   _damageSoundTimer: 0
   _shouldPlayDamageSound: 0
-  _maxHealth: 150
+  _maxHealth: 200
   _curHealth: 0
   IsPlayer: 1
   _fleshDrops: 0
@@ -9943,6 +9943,7 @@ MonoBehaviour:
   Facing: {x: 1, y: 0}
   Attack: {fileID: 0}
   GameOverCanvas: {fileID: 0}
+  baseController: {fileID: 9100000, guid: 01792efa978704e46a3fd1b2f96cb861, type: 2}
   twoLimbsAnimator: {fileID: 22100000, guid: dd2a9a0b4e4ed154fba6f96afdfbcfc6, type: 2}
   threeLimbsAnimator: {fileID: 22100000, guid: 1bd4f30fc8adbd74baa0acea1b369052, type: 2}
   fourLimbsAnimator: {fileID: 22100000, guid: e70a5ebf34e1f5b4c9150251999b3e58, type: 2}
@@ -10049,6 +10050,7 @@ MonoBehaviour:
   hitvfx: {fileID: 4606856371093765618}
   deathvfx: {fileID: 6170114182305014106}
   bigDaddy: {fileID: 0}
+  IsGameOver: 0
 --- !u!95 &5518174546896817463
 Animator:
   serializedVersion: 7
@@ -10167,7 +10169,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 29.375996, y: 32.38}
+    oldSize: {x: 29.369999, y: 32.408276}
     newSize: {x: 27.4, y: 20.215528}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

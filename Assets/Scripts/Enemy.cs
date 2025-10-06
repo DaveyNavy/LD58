@@ -49,7 +49,7 @@ public class Enemy : Damagable
         }
     }
 
-    bool IsSpriteOnScreen()
+    public bool IsSpriteOnScreen()
     {
         if (spriteRenderer == null || mainCamera == null)
         {

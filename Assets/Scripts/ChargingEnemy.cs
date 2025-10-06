@@ -76,7 +76,7 @@ public class ChargingEnemy : Enemy
 
         float distance = Vector3.Distance(transform.position, PlayerStats.Instance.playerTransform);
 
-        if (distance > _attackRange)
+        if (distance > _attackRange || !IsSpriteOnScreen())
         {
             return;
         }
