@@ -70,13 +70,6 @@ public class PlayerMovement : Damagable
             targetPosition,
             0.1f // Smooth factor, adjust as needed
         );
-
-        //// Rotate sprite based on Facing direction
-        //if (Facing != Vector2.zero)
-        //{
-        //    float angle = Mathf.Atan2(Facing.y, Facing.x) * Mathf.Rad2Deg;
-        //    transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        //}
     }
 
     void OnHoldComplete()
@@ -123,6 +116,6 @@ public class PlayerMovement : Damagable
         PlayerStats.Instance.limbs -= 1;
         PlayerStats.Instance.RepairLimb();
         PlayerStats.Instance.player.Heal(1);
-        PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position;
+        PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position + new Vector3(0, -5, 0);
     }
 }
