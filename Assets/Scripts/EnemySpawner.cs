@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
         Spawn();
     }
 
-    private void Spawn()
+    public void Spawn()
     {
         for (int i = 0; i < 5; i++)
         {

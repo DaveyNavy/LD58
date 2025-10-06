@@ -9928,7 +9928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   flesh: {fileID: 0}
-  _maxHealth: 100
+  _damageSoundTimer: 0
+  _shouldPlayDamageSound: 0
+  _maxHealth: 150
   _curHealth: 0
   IsPlayer: 1
   _fleshDrops: 0
@@ -10036,8 +10038,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   fleshText: {fileID: 0}
-  flesh: 100
-  limbs: 4
+  nextLimbCost: {fileID: 0}
+  flesh: 0
+  limbs: 1
   playerTransform: {x: 0, y: 0, z: 0}
   player: {fileID: 2899584953301846489}
   limbHealth: 100
@@ -10170,5 +10173,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 20, y: 10}
+  m_Size: {x: 15, y: 5}
   m_EdgeRadius: 0
