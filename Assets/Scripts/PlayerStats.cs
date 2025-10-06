@@ -28,12 +28,6 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
 
         player = GetComponent<PlayerMovement>();
-
-        //GameObject canvas = GameObject.Find("Canvas");
-        //if (canvas != null)
-        //{
-        //    daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
-        //}
     }
 
     private float daddyFleshDecayTimer = 0f;
@@ -54,29 +48,6 @@ public class PlayerStats : MonoBehaviour
             {
                 player.TakeDamage(1);
             }
-        }
-
-        if (daddyStatusText == null) return;
-
-        if (DaddyFlesh >= 150) // 150+
-        {
-            daddyStatusText.text = "Big Daddy is gonna bust!";
-        }
-        else if (DaddyFlesh >= 100) // 100 -> 150
-        {
-            daddyStatusText.text = "Big Daddy is Happy!";
-        }
-        else if (DaddyFlesh >= 50) // 50 -> 100
-        {
-            daddyStatusText.text = "Big Daddy is Content!";
-        }
-        else if (DaddyFlesh > 10) // 10 -> 50
-        {
-            daddyStatusText.text = "Big Daddy is Hungry! (" + (50 - DaddyFlesh) + " more flesh needed)";
-        }
-        else // 0 -> 10
-        {
-            daddyStatusText.text = "Big Daddy needs flesh bad! (" + (50 - DaddyFlesh) + " more flesh needed)";
         }
     }
 
@@ -122,7 +93,7 @@ public class PlayerStats : MonoBehaviour
     public void UpdateFlesh(int change)
     {
         flesh += change;
-        fleshText.text = "Flesh: " + flesh;
+        fleshText.text = "x" + flesh;
     }
 
     public void limbDecay()

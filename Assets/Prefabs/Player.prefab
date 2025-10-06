@@ -10034,7 +10034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   fleshText: {fileID: 0}
   flesh: 0
-  limbs: 2
+  limbs: 4
   playerTransform: {x: 0, y: 0, z: 0}
   player: {fileID: 2899584953301846489}
   limbHealth: 100
