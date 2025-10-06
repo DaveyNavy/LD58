@@ -47,6 +47,8 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundAnimTimer = Mathf.Max(0, _attackPoundAnimTimer - 1);
         _attackDashTimer = Mathf.Max(0, _attackDashTimer - 1);
 
+        Debug.Log(_attackAnimTimer);
+
         if (_attackAnimTimer == 1)
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing, 1.5f), GetSpawnRot(_facing));
@@ -142,7 +144,7 @@ public class PlayerAttack : MonoBehaviour
 
         PlayerStats.Instance.limbDecay();
         PlayerStats.Instance.player.Speed = 0;
-        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 5 : 20;
+        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 20 : 20;
     }
     private void AttackSpin()
     {

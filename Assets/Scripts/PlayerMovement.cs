@@ -100,7 +100,8 @@ public class PlayerMovement : Damagable
                 OnHoldComplete();
             }
         }
-        else
+
+        if (Input.GetKeyUp(key))
         {
             holdTimer = 0f;
             actionTriggered = false;
@@ -151,6 +152,13 @@ public class PlayerMovement : Damagable
         Vector2 currentVelocity = Rigidbody.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
+
+        if (PlayerStats.Instance.limbs != 1)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (velocityChange.x < 0 ? -1 : 1);
+            transform.localScale = scale;
+        }
     }
 
 
