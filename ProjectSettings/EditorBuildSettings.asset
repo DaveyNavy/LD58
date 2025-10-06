@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JoScene.unity
     guid: 9e86a4654523a4ddc9a0c435f235f242
+  - enabled: 1
+    path: Assets/Scenes/TileScene.unity
+    guid: 4a0daac415f9b674db544ca5b4efeda1
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: b9d319d44a7aa624ab15f29b256626af
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
