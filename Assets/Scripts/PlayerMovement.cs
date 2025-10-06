@@ -12,6 +12,7 @@ public class PlayerMovement : Damagable
     private Camera _mainCamera;
     public Vector2 Facing = Vector2.right;
     public PlayerAttack Attack;
+    public GameObject GameOverCanvas;
 
     protected override void Awake()
     {
@@ -103,11 +104,12 @@ public class PlayerMovement : Damagable
         Debug.Log("Player Died!");
         GetComponent<Collider2D>().enabled = false;
         Time.timeScale = 0.5f;
-        GameObject.Find("GameOverCanvas").GetComponent<GameOverCanvas>().Show();
+        GameOverCanvas.SetActive(true);
     }
 
     public void OnRespawn()
     {
+        GameOverCanvas.SetActive(false);
         GetComponent<Collider2D>().enabled = true;
         Time.timeScale = 0.5f;
         PlayerStats.Instance.limbs -= 1;
