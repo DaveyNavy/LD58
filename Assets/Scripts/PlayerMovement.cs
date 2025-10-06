@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -102,11 +103,13 @@ public class PlayerMovement : Damagable
         Debug.Log("Player Died!");
         GetComponent<Collider2D>().enabled = false;
         Time.timeScale = 0.5f;
+        GameObject.Find("GameOverCanvas").GetComponent<GameOverCanvas>().Show();
     }
 
     public void OnRespawn()
     {
         GetComponent<Collider2D>().enabled = true;
+        Time.timeScale = 0.5f;
         PlayerStats.Instance.limbs -= 1;
         PlayerStats.Instance.RepairLimb();
         PlayerStats.Instance.player.Heal(1);

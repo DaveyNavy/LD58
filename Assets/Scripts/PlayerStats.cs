@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
         GameObject canvas = GameObject.Find("Canvas");
         if (canvas != null)
         {
-            daddyStatusText = GameObject.Find("Canvas").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
+            daddyStatusText = GameObject.Find("Canvas").transform.Find("GameUI").transform.Find("DaddyStatusText").GetComponent<TextMeshProUGUI>();
         }
     }
 
