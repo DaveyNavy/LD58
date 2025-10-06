@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlockSize: 16
+    - _BlockSize: 64
     - _EnableExternalAlpha: 0
     - _Glossiness: 0.5
     - _Metallic: 0
