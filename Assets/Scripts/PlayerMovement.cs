@@ -92,25 +92,6 @@ public class PlayerMovement : Damagable
         Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
     }
 
-    //protected override void Update()
-    //{
-    //    //Vector3 targetPosition = transform.position;
-    //    //targetPosition.z = _mainCamera.transform.position.z; // Keep original camera z
-    //    //_mainCamera.transform.position = Vector3.Lerp(
-    //    //    _mainCamera.transform.position,
-    //    //    targetPosition,
-    //    //    0.05f // Smooth factor, adjust as needed
-    //    //);
-
-    //    //// Rotate sprite based on Facing direction
-    //    //if (Facing != Vector2.zero)
-    //    //{
-    //    //    float angle = Mathf.Atan2(Facing.y, Facing.x) * Mathf.Rad2Deg;
-    //    //    transform.rotation = Quaternion.Euler(0f, 0f, angle);
-    //    //}
-
-    //    // Clamp camera within bounds
-    //}
 
     public override void OnDeath()
     {
