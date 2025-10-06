@@ -120,6 +120,7 @@ public class PlayerStats : MonoBehaviour
         {
             UpdateFlesh(-GetCurrentLimbCost());
             limbs++;
+            player.Heal(100);
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.upgrade1, 0.7f);
             nextLimbCost.text = "Flesh for next limb: " + GetCurrentLimbCost();
         }
@@ -132,6 +133,7 @@ public class PlayerStats : MonoBehaviour
             UpdateFlesh(-1);
             limbHealth = Mathf.Min(limbHealth + 5, 100);
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.chargeup1, 0.7f);
+            player.Heal(3);
         }
     }
 }

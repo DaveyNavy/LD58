@@ -18,6 +18,7 @@ public class PlayerMovement : Damagable
     private AudioSource footstepSource1;
     private AudioSource footstepSource2;
 
+    public RuntimeAnimatorController baseController;
     public AnimatorOverrideController twoLimbsAnimator;
     public AnimatorOverrideController threeLimbsAnimator;
     public AnimatorOverrideController fourLimbsAnimator;
@@ -76,6 +77,10 @@ public class PlayerMovement : Damagable
         {
             BoxCollider2D collider = GetComponent<BoxCollider2D>();
             collider.offset = new Vector2(0, -4);
+        }
+        if (PlayerStats.Instance.limbs == 1)
+        {
+            animator.runtimeAnimatorController = baseController;
         }
         if (PlayerStats.Instance.limbs == 2)
         {
@@ -194,8 +199,13 @@ public class PlayerMovement : Damagable
         GameOverCanvas.SetActive(false);
         GetComponent<Collider2D>().enabled = true;
         Time.timeScale = 1f;
-        if (PlayerStats.Instance.limbs > 1) PlayerStats.Instance.limbs -= 1;
-        PlayerStats.Instance.RepairLimb();
+        Debug.Log(PlayerStats.Instance.limbs);
+        if (PlayerStats.Instance.limbs > 1)
+        {
+            PlayerStats.Instance.limbs--;
+        }
+        Debug.Log(PlayerStats.Instance.limbs);
+        PlayerStats.Instance.limbHealth = 100;
         PlayerStats.Instance.player.Heal(1);
         PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position + new Vector3(0, -5, 0);
         foreach (GameObject spawner in GameObject.FindGameObjectsWithTag("Spawner"))
