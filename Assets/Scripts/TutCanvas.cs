@@ -39,7 +39,13 @@ public class TutCanvas : MonoBehaviour
         // Wait 1 second more
         yield return new WaitForSeconds(1f);
 
-        StartCoroutine(TypeText("Welcome, my special fella"));
+        StartCoroutine(TypeText("Welcome, my special creation"));
+        yield return new WaitForSeconds(1f);
+
+        StartCoroutine(TypeText("Move with WASD, please."));
+        yield return new WaitForSeconds(1f);
+
+        
     }
 
     private IEnumerator TypeText(string text, float charDelay = 0.05f)
