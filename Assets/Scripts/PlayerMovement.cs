@@ -72,6 +72,11 @@ public class PlayerMovement : Damagable
 
     void Update()
     {
+        if (PlayerStats.Instance.limbs != 1)
+        {
+            BoxCollider2D collider = GetComponent<BoxCollider2D>();
+            collider.offset = new Vector2(0, -4);
+        }
         if (PlayerStats.Instance.limbs == 2)
         {
             animator.runtimeAnimatorController = twoLimbsAnimator;
