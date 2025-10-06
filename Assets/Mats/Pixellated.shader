@@ -61,23 +61,24 @@ Shader "Custom/CensorBlurShader"
                 return OUT;
             }
 
+            // --- Fragment (Pixel) Shader ---
             half4 frag(Varyings IN) : SV_Target
             {
-                // --- CORE LOGIC CHANGE ---
-
                 // 1. Calculate the UV coordinates for the center of the block
                 float2 blockCenterUV = (floor(IN.uv * _BlockSize) + 0.5) / _BlockSize;
-                
-                // 2. Determine which Mipmap level to sample from based on the block size.
-                // log2 converts the block size into a perfect mip level index.
+    
+                // 2. Determine which Mipmap level to sample from
                 float mipLevel = log2(_BlockSize);
 
-                // 3. Sample the texture using tex2Dlod, which lets us specify the mip level.
-                // We pass a float4 with the UVs in .xy and the mip level in .w
-                half4 color = SAMPLE_TEXTURE2D_LOD(_MainTex, sampler_MainTex, blockCenterUV, mipLevel);
+                // 3. Sample the texture using the specified mip level
+                half4 blurredColor = SAMPLE_TEXTURE2D_LOD(_MainTex, sampler_MainTex, blockCenterUV, mipLevel);
 
-                color *= IN.color;
-                return color;
+                // --- LOGIC CHANGE IS HERE ---
+                // Instead of tinting the original color, we tint the new blurred color
+                blurredColor *= IN.color * _Color; 
+    
+                // Return the blurred color directly. Its alpha will define the shape.
+                return blurredColor; 
             }
             ENDHLSL
         }
