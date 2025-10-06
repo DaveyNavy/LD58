@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: f8a891406d5bbff46815c94f3608ad53
+guid: 2617f3254fc108547a7d1d96a2093095
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4801227835787818748
-    second: enemy1_0
+      213: -2441198726268815977
+    second: youdied_0
   - first:
-      213: -1675025149711837622
-    second: enemy1_1
+      213: 6562300023919646584
+    second: youdied_1
   - first:
-      213: 6657046128381406734
-    second: enemy1_2
+      213: -458455911868889866
+    second: youdied_2
+  - first:
+      213: 9112716796988877210
+    second: youdied_3
+  - first:
+      213: 3266133914457753861
+    second: youdied_4
+  - first:
+      213: 6647278012697562838
+    second: youdied_5
+  - first:
+      213: -4274491467728467757
+    second: youdied_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,67 +131,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy1_0
+      name: youdied_0
       rect:
         serializedVersion: 2
-        x: 1261
-        y: 245
-        width: 568
-        height: 668
+        x: 0
+        y: 0
+        width: 655
+        height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf6b9d5574361a240800000000000000
-      internalID: 4801227835787818748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy1_1
-      rect:
-        serializedVersion: 2
-        x: 1842
-        y: 668
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a469491408d11c8e0800000000000000
-      internalID: -1675025149711837622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy1_2
-      rect:
-        serializedVersion: 2
-        x: 1842
-        y: 590
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0e2097ee24926c50800000000000000
-      internalID: 6657046128381406734
+      spriteID: 7957c9641be1f1ed0800000000000000
+      internalID: -2441198726268815977
       vertices: []
       indices: 
       edges: []
@@ -188,7 +156,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c8539c8d2b10954196230b20dd8ff71
     internalID: 0
     vertices: []
     indices: 
@@ -196,11 +164,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":655.0,"y":395.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      enemy1_0: 4801227835787818748
-      enemy1_1: -1675025149711837622
-      enemy1_2: 6657046128381406734
+      youdied_0: -2441198726268815977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
