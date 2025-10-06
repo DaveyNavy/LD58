@@ -183,7 +183,7 @@ public class PlayerMovement : Damagable
         GameOverCanvas.SetActive(false);
         GetComponent<Collider2D>().enabled = true;
         Time.timeScale = 1f;
-        PlayerStats.Instance.limbs -= 1;
+        if (PlayerStats.Instance.limbs > 1) PlayerStats.Instance.limbs -= 1;
         PlayerStats.Instance.RepairLimb();
         PlayerStats.Instance.player.Heal(1);
         PlayerStats.Instance.player.transform.position = PlayerStats.Instance.bigDaddy.transform.position + new Vector3(0, -5, 0);

@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
     public TMP_Text fleshText;
+    public TMP_Text nextLimbCost;
+
 
     public int flesh = 100;
     public int limbs = 1;
@@ -80,11 +82,11 @@ public class PlayerStats : MonoBehaviour
         switch (limbs)
         {
             case 1:
-                return 25;
+                return 5;
             case 2:
-                return 50;
+                return 10;
             case 3:
-                return 100;
+                return 25;
             default:
                 return -1;
         } 
@@ -96,9 +98,9 @@ public class PlayerStats : MonoBehaviour
         fleshText.text = "x" + flesh;
     }
 
-    public void limbDecay()
+    public void limbDecay(int change)
     {
-        limbHealth--;
+        limbHealth -= change;
         if (limbHealth <= 0)
         {
             limbHealth = 100;
@@ -117,6 +119,7 @@ public class PlayerStats : MonoBehaviour
             UpdateFlesh(-GetCurrentLimbCost());
             limbs++;
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.upgrade1, 0.7f);
+            nextLimbCost.text = "Flesh for next limb: " + GetCurrentLimbCost();
         }
     }
 

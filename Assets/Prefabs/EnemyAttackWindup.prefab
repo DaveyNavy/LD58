@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111953077608f7b4ba2b079dd0286cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  Lifetime: 40
+  Lifetime: 50
   Damage: 0
   Knockback: 0

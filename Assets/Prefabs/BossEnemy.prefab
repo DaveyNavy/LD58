@@ -134,10 +134,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEnemy
   flesh: {fileID: 2184338832689168756, guid: 5b63e04fb2ca84249bee327757316155, type: 3}
+  _damageSoundTimer: 0
+  _shouldPlayDamageSound: 0
   _maxHealth: 200
   _curHealth: 0
   IsPlayer: 0
-  _fleshDrops: 10
+  _fleshDrops: 25
   _contactDamage: 20
   _contactDamageGiveKB: 0
   _contactDamageTakeKB: 0

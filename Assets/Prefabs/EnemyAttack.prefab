@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   Lifetime: 10
-  Damage: 30
+  Damage: 20
   Knockback: 0
