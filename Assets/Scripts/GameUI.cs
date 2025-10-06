@@ -23,6 +23,6 @@ public class GameUI : MonoBehaviour
         healthSlider.value = PlayerStats.Instance.player._curHealth;
         limbHealthSlider.value = PlayerStats.Instance.limbHealth;
         homunculusStatus.value = PlayerStats.Instance.DaddyFlesh;
-        Debug.Log(PlayerStats.Instance.limbHealth);
+        //Debug.Log(PlayerStats.Instance.limbHealth);
     }
 }

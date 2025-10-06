@@ -107,18 +107,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargingEnemy
   flesh: {fileID: 0}
+  _damageSoundTimer: 0
+  _shouldPlayDamageSound: 0
   _maxHealth: 100
   _curHealth: 0
   IsPlayer: 0
   _fleshDrops: 0
-  _contactDamage: 40
+  _contactDamage: 30
   _contactDamageGiveKB: 300
   _contactDamageTakeKB: 300
   knockbackImmune: 0
   speed: 3
   animator: {fileID: 0}
   StunTimer: 0
-  AttackCD: 40
+  AttackCD: 50
 --- !u!50 &9100094925377256552
 Rigidbody2D:
   serializedVersion: 5

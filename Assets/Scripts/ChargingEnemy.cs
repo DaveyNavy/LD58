@@ -74,7 +74,9 @@ public class ChargingEnemy : Enemy
     {
         if (_attackTimer > 0) return;
 
-        if (Vector3.Distance(transform.position, PlayerStats.Instance.playerTransform) > _attackRange)
+        float distance = Vector3.Distance(transform.position, PlayerStats.Instance.playerTransform);
+
+        if (distance > _attackRange)
         {
             return;
         }
@@ -136,7 +138,7 @@ public class ChargingEnemy : Enemy
         lineRenderer2.enabled = true;
 
         // Calculate hook pattern: first force is diagonal, second force is toward player
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 20; i++)
         {
             while (Time.timeScale == 0f)
                 yield return null;

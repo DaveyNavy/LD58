@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundAnimTimer = Mathf.Max(0, _attackPoundAnimTimer - 1);
         _attackDashTimer = Mathf.Max(0, _attackDashTimer - 1);
 
-        Debug.Log(_attackAnimTimer);
+        //Debug.Log(_attackAnimTimer);
 
         if (_attackAnimTimer == 1)
         {
