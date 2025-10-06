@@ -5,57 +5,45 @@ using UnityEngine.UI;
 
 public class TutCanvas : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI tutText;
-    [SerializeField] private Image blackImage;
+    [SerializeField] private Image image;
+    [SerializeField] private Sprite sprite1;
+    [SerializeField] private Sprite sprite2;
+    [SerializeField] private Sprite sprite3;
+    [SerializeField] private Sprite sprite4;
+    [SerializeField] private Sprite sprite5;
+    [SerializeField] private Sprite sprite6;
+    [SerializeField] private Sprite sprite7;
 
+    private int currentSpriteIndex = 0;
+    private Sprite[] sprites;
 
     private void Start()
     {
-        StartCoroutine(Tutorial());
-    }
-
-    private IEnumerator Tutorial()
-    {
-        // Fade blackImage alpha to 0 over 2 seconds
-        float duration = 2f;
-        float elapsed = 0f;
-        Color color = blackImage.color;
-        float startAlpha = color.a;
-        float endAlpha = 0f;
-
-        while (elapsed < duration)
+        sprites = new Sprite[] { sprite1, sprite2, sprite3, sprite4, sprite5, sprite6, sprite7 };
+        if (sprites.Length > 0 && image != null)
         {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / duration);
-            color.a = Mathf.Lerp(startAlpha, endAlpha, t);
-            blackImage.color = color;
-            yield return null;
+            image.sprite = sprites[0];
         }
 
-        // Ensure alpha is exactly 0
-        color.a = endAlpha;
-        blackImage.color = color;
-
-        // Wait 1 second more
-        yield return new WaitForSeconds(1f);
-
-        StartCoroutine(TypeText("Welcome, my special creation"));
-        yield return new WaitForSeconds(1f);
-
-        StartCoroutine(TypeText("Move with WASD, please."));
-        yield return new WaitForSeconds(1f);
-
-        
+        Time.timeScale = 0f; // Pause the game
+        Time.fixedDeltaTime = 0;
     }
 
-    private IEnumerator TypeText(string text, float charDelay = 0.05f)
+    private void Update()
     {
-        tutText.text = text;
-        tutText.maxVisibleCharacters = 0;
-        for (int i = 1; i <= text.Length; i++)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            tutText.maxVisibleCharacters = i;
-            yield return new WaitForSeconds(charDelay);
+            if (sprites != null && sprites.Length > 0)
+            {
+                currentSpriteIndex = Mathf.Min(currentSpriteIndex + 1, sprites.Length - 1);
+                image.sprite = sprites[currentSpriteIndex];
+            }
+            if (currentSpriteIndex == sprites.Length - 1)
+            {
+                gameObject.SetActive(false);
+                Time.timeScale = 1f; // Pause the game
+                Time.fixedDeltaTime = 0.02f;
+            }
         }
     }
 }

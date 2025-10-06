@@ -65,11 +65,11 @@ public class BigDaddy : Damagable
         PlayerStats.Instance.player.Heal(amount);
         PlayerStats.Instance.player.Attack.ResetCooldowns();
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.feed1, 0.7f, 2f);
-        GetComponent<Collider2D>().enabled = false;
 
         if (PlayerStats.Instance.DaddyFlesh >= 200)
         {
             PlayerStats.Instance.DaddyFlesh = 200;
+            GetComponent<Collider2D>().enabled = false;
             StartCoroutine(EndGame());
         }
         return true;

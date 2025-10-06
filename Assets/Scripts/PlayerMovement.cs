@@ -175,11 +175,18 @@ public class PlayerMovement : Damagable
         Debug.Log("Player Died!");
         GetComponent<Collider2D>().enabled = false;
         Time.timeScale = 0.5f;
-        GameOverCanvas.SetActive(true);
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        if (!PlayerStats.Instance.IsGameOver)
         {
-            Destroy(enemy);
+            GameOverCanvas.SetActive(true);
         }
+        else
+        {
+            // game won screen
+        }
+            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                Destroy(enemy);
+            }
     }
 
     public void OnRespawn()
