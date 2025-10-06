@@ -18,6 +18,11 @@ public class PlayerMovement : Damagable
     private AudioSource footstepSource1;
     private AudioSource footstepSource2;
 
+    public AnimatorOverrideController twoLimbsAnimator;
+    public AnimatorOverrideController threeLimbsAnimator;
+    public AnimatorOverrideController fourLimbsAnimator;
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -67,6 +72,23 @@ public class PlayerMovement : Damagable
 
     void Update()
     {
+        if (PlayerStats.Instance.limbs != 1)
+        {
+            BoxCollider2D collider = GetComponent<BoxCollider2D>();
+            collider.offset = new Vector2(0, -4);
+        }
+        if (PlayerStats.Instance.limbs == 2)
+        {
+            animator.runtimeAnimatorController = twoLimbsAnimator;
+        }
+        else if (PlayerStats.Instance.limbs == 3)
+        {
+            animator.runtimeAnimatorController = threeLimbsAnimator;
+
+        }
+        else if (PlayerStats.Instance.limbs == 4) {
+            animator.runtimeAnimatorController = fourLimbsAnimator;
+        }
         if (Input.GetKey(key))
         {
             Speed = 0;
@@ -78,7 +100,8 @@ public class PlayerMovement : Damagable
                 OnHoldComplete();
             }
         }
-        else
+
+        if (Input.GetKeyUp(key))
         {
             holdTimer = 0f;
             actionTriggered = false;
@@ -131,6 +154,13 @@ public class PlayerMovement : Damagable
         Vector2 currentVelocity = Rigidbody.linearVelocity;
         Vector2 velocityChange = desiredVelocity - currentVelocity;
         Rigidbody.AddForce(velocityChange, ForceMode2D.Force);
+
+        if (PlayerStats.Instance.limbs != 1)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (velocityChange.x < 0 ? -1 : 1);
+            transform.localScale = scale;
+        }
     }
 
 

@@ -20,13 +20,14 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement _player;
     private float _speed;
     private Vector2 _facing;
+    private Animator animator;
     private AudioSource _chargeUpSource;
 
     private void Awake()
     {
         _player = GetComponent<PlayerMovement>();
         _speed = PlayerStats.Instance.player.Speed;
-
+        animator = GetComponent<Animator>();
         _chargeUpSource = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, false);
         _chargeUpSource.volume = 1f;
     }
@@ -46,6 +47,8 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundAnimTimer = Mathf.Max(0, _attackPoundAnimTimer - 1);
         _attackDashTimer = Mathf.Max(0, _attackDashTimer - 1);
 
+        Debug.Log(_attackAnimTimer);
+
         if (_attackAnimTimer == 1)
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing, 1.5f), GetSpawnRot(_facing));
@@ -60,6 +63,20 @@ public class PlayerAttack : MonoBehaviour
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.attack3, 0.7f);
             _chargeUpSource.Stop();
         }
+
+        if (_attackSpinTimer == 0)
+        {
+            animator.SetBool("IsSpinAttack", false);
+        }
+        if (_attackPoundTimer == 0)
+        {
+            animator.SetBool("IsGroundPound", false);
+        }
+        if (_attackTimer == 0)
+        {
+            animator.SetBool("IsAttack", false);
+        }
+
     }
 
     public void OnAttack()
@@ -96,6 +113,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
+        animator.SetBool("IsAttack", true);
         _chargeUpSource.Play();
         PlayerStats.Instance.limbDecay();
         _facing = _player.Facing;
@@ -122,9 +140,11 @@ public class PlayerAttack : MonoBehaviour
         _attackPoundTimer = AttackPoundCD;
         _chargeUpSource.Play();
         Debug.Log("Player Attack Pound!");
+        animator.SetBool("IsGroundPound", true);
+
         PlayerStats.Instance.limbDecay();
         PlayerStats.Instance.player.Speed = 0;
-        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 5 : 20;
+        _attackPoundAnimTimer = (PlayerStats.Instance.limbs > 2) ? 20 : 20;
     }
     private void AttackSpin()
     {
@@ -132,9 +152,10 @@ public class PlayerAttack : MonoBehaviour
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
         PlayerStats.Instance.limbDecay();
+        animator.SetBool("IsSpinAttack", true);
+        Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
         GameObject spin = Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity);
         spin.transform.parent = transform;
-
     }
 
     private void AttackDash()

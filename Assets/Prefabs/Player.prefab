@@ -9941,6 +9941,9 @@ MonoBehaviour:
   Facing: {x: 1, y: 0}
   Attack: {fileID: 0}
   GameOverCanvas: {fileID: 0}
+  twoLimbsAnimator: {fileID: 22100000, guid: dd2a9a0b4e4ed154fba6f96afdfbcfc6, type: 2}
+  threeLimbsAnimator: {fileID: 22100000, guid: 1bd4f30fc8adbd74baa0acea1b369052, type: 2}
+  fourLimbsAnimator: {fileID: 22100000, guid: e70a5ebf34e1f5b4c9150251999b3e58, type: 2}
   key: 304
   holdTime: 1
 --- !u!114 &3118759746719257174
@@ -10033,8 +10036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   fleshText: {fileID: 0}
-  flesh: 0
-  limbs: 2
+  flesh: 100
+  limbs: 4
   playerTransform: {x: 0, y: 0, z: 0}
   player: {fileID: 2899584953301846489}
   limbHealth: 100
@@ -10117,7 +10120,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 29.375996, y: 32.38}
+  m_Size: {x: 27.4, y: 20.215528}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10162,7 +10165,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 29.375996, y: 32.38}
-    newSize: {x: 29.375996, y: 32.38}
+    newSize: {x: 27.4, y: 20.215528}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
