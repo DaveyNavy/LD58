@@ -65,7 +65,6 @@ public class ChargingEnemy : Enemy
     private void FixedUpdate()
     {
         _attackTimer = Mathf.Max(0, _attackTimer - 1);
-        _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);
     }
 
     public void Attack()
@@ -98,7 +97,6 @@ public class ChargingEnemy : Enemy
 
     private IEnumerator ChargeAttack()
     {
-        _attackAnimTimer = 40;
         _rb.linearVelocity = Vector2.zero;
 
         speed = 0;

@@ -116,8 +116,9 @@ MonoBehaviour:
   _contactDamageTakeKB: 300
   knockbackImmune: 0
   speed: 3
+  animator: {fileID: 0}
   StunTimer: 0
-  AttackCD: 400
+  AttackCD: 40
 --- !u!50 &9100094925377256552
 Rigidbody2D:
   serializedVersion: 5
