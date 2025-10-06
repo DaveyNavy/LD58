@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &334554076156584530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8577582802436674010}
+  - component: {fileID: 4801157671341204226}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8577582802436674010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334554076156584530}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45924, y: -0.02794, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4801157671341204226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334554076156584530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51563dc38df5bc443a67315974183d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  attack1: {fileID: 8300000, guid: d2348e88bf405d341841296096a67f07, type: 3}
+  attack2: {fileID: 8300000, guid: 6a6e8cf17ca25b342a069fdd4b1a4eeb, type: 3}
+  attack3: {fileID: 8300000, guid: 3a59ca7b7b421e14c87551ed9d57b55f, type: 3}
+  attack4: {fileID: 8300000, guid: 8e392cdc468e84f48ac951ea982bf6b3, type: 3}
+  attack5: {fileID: 8300000, guid: 689fbe5719dce404a84c840777781676, type: 3}
+  death1: {fileID: 8300000, guid: cf996d9dea4ac1742a9e4462a71c964f, type: 3}
+  death2: {fileID: 8300000, guid: e78660788add11f4ab464f409110b718, type: 3}
+  death3: {fileID: 8300000, guid: 1121435ad2d012b40bf38fcdeff758cb, type: 3}
+  death4: {fileID: 8300000, guid: 311c0db4080df9145917c321aaead696, type: 3}
+  hurt1: {fileID: 8300000, guid: dce4cd8fb5f797643b2a97fe4c9b5df3, type: 3}
+  heartbeat1: {fileID: 8300000, guid: 8897dcfef9d8969419c6cd742c7f5c76, type: 3}
+  walk1: {fileID: 8300000, guid: 48dbafb5b80a235419b8a219efc5cd8e, type: 3}
+  walk2: {fileID: 8300000, guid: 112d0d7e4dc12ec40864382bb4ca496c, type: 3}
+  feed1: {fileID: 8300000, guid: 10d1d96b0f5819b4999fd96e0cc1788b, type: 3}
+  upgrade1: {fileID: 8300000, guid: 5585d372d9cb639499c40e2a2b7abd8e, type: 3}
+  cutscene1: {fileID: 8300000, guid: e6b4c5a047afae940b6c6264a10d72eb, type: 3}
+  misc1: {fileID: 8300000, guid: 211a38901441b5240a8ec265078b6dd3, type: 3}
+  misc2: {fileID: 8300000, guid: c84e330ce55b48b4f96eb67ff49dc638, type: 3}
+  liminal1: {fileID: 8300000, guid: 850d0a9abbcb6a94b8a183fa26787f08, type: 3}
