@@ -20,11 +20,15 @@ public class PlayerAttack : MonoBehaviour
     private PlayerMovement _player;
     private float _speed;
     private Vector2 _facing;
+    private AudioSource _chargeUpSource;
 
     private void Awake()
     {
         _player = GetComponent<PlayerMovement>();
         _speed = PlayerStats.Instance.player.Speed;
+
+        _chargeUpSource = SoundManager.PlayOnAudioSource(transform, SoundManager.Instance.chargeup1, false);
+        _chargeUpSource.volume = 1f;
     }
     public void ResetCooldowns()
     {
@@ -46,11 +50,15 @@ public class PlayerAttack : MonoBehaviour
         {
             Instantiate(AttackPrefab, GetSpawnPos(_facing, 1.5f), GetSpawnRot(_facing));
             PlayerStats.Instance.player.Speed = _speed;
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.attack2, 0.7f);
+            _chargeUpSource.Stop();
         }
         if (_attackPoundAnimTimer == 1)
         {
             Instantiate(AttackPoundPrefab, transform.position, Quaternion.identity);
             PlayerStats.Instance.player.Speed = _speed;
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.attack3, 0.7f);
+            _chargeUpSource.Stop();
         }
     }
 
@@ -88,6 +96,7 @@ public class PlayerAttack : MonoBehaviour
         if (_attackTimer > 0) return;
         _attackTimer = AttackCD;
         Debug.Log("Player Attack!");
+        _chargeUpSource.Play();
         PlayerStats.Instance.limbDecay();
         _facing = _player.Facing;
         if (PlayerStats.Instance.limbs <= 1)
@@ -111,6 +120,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (_attackPoundTimer > 0) return;
         _attackPoundTimer = AttackPoundCD;
+        _chargeUpSource.Play();
         Debug.Log("Player Attack Pound!");
         PlayerStats.Instance.limbDecay();
         PlayerStats.Instance.player.Speed = 0;
@@ -122,7 +132,9 @@ public class PlayerAttack : MonoBehaviour
         _attackSpinTimer = AttackSpinCD;
         Debug.Log("Player Attack Spin!");
         PlayerStats.Instance.limbDecay();
-        Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity, _player.transform);
+        GameObject spin = Instantiate(AttackSpinPrefab, transform.position, Quaternion.identity);
+        spin.transform.parent = transform;
+
     }
 
     private void AttackDash()
@@ -131,6 +143,9 @@ public class PlayerAttack : MonoBehaviour
         _attackDashTimer = AttackDashCD;
         Debug.Log("Player Attack Dash!");
         PlayerStats.Instance.limbDecay();
+
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.attack1, 0.7f, 2f);
+
 
         Instantiate(AttackDashPrefab, GetSpawnPos(_player.Facing, 2f), GetSpawnRot(_player.Facing));
         _player.ApplyKnockback(_player.Facing * 500f);

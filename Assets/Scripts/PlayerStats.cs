@@ -145,6 +145,7 @@ public class PlayerStats : MonoBehaviour
         {
             UpdateFlesh(-GetCurrentLimbCost());
             limbs++;
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.upgrade1, 0.7f);
         }
     }
 
@@ -154,6 +155,7 @@ public class PlayerStats : MonoBehaviour
         {
             UpdateFlesh(-1);
             limbHealth = Mathf.Min(limbHealth + 5, 100);
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.chargeup1, 0.7f);
         }
     }
 }

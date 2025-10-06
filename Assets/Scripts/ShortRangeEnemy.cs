@@ -33,7 +33,7 @@ public class ShortRangeEnemy : Enemy
         Attack();
     }
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
         _attackTimer = Mathf.Max(0, _attackTimer - 1);
         _attackAnimTimer = Mathf.Max(0, _attackAnimTimer - 1);

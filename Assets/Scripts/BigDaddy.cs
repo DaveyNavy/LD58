@@ -19,7 +19,7 @@ public class BigDaddy : Damagable
     {
         PlayerStats.Instance.bigDaddy = this;
     }
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
         // Text:
         float distance = Vector3.Distance(transform.position, PlayerStats.Instance.playerTransform);
@@ -51,6 +51,7 @@ public class BigDaddy : Damagable
         PlayerStats.Instance.DaddyFlesh += amount;
         PlayerStats.Instance.player.Heal(amount);
         PlayerStats.Instance.player.Attack.ResetCooldowns();
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.feed1, 0.7f, 2f);
         return true;
     }
 }

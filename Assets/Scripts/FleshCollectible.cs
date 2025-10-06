@@ -9,6 +9,7 @@ public class FleshCollectible : MonoBehaviour
         var damagable = collision.GetComponent<Damagable>();
         if (damagable != null && damagable.IsPlayer)
         {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.eat1, 1f, 2f);
             PlayerStats.Instance.UpdateFlesh(1);
             Destroy(gameObject);
         }
