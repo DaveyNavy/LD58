@@ -41,12 +41,12 @@ public class AOEEnemy : Damagable
     {
         aoeTimer = Mathf.Max(aoeTimer - 1, 0);
         _attackAnimTimer = Mathf.Max(_attackAnimTimer - 1, 0);
-        if (aoeTimer == 0 && inRange)
+        if (aoeTimer == 0 && inRange && IsSpriteOnScreen())
         {
             aoeTimer = aoeCooldown;
             _attackAnimTimer = 100;
         }
-        if (aoeTimer >= aoeCooldown - aoeMeteors * 4 && aoeTimer % 4 == 0)
+        if (aoeTimer >= aoeCooldown - aoeMeteors * 4 && aoeTimer % 4 == 0 && IsSpriteOnScreen())
         {
             animator.SetBool("IsAttacking", true);
 

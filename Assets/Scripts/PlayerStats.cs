@@ -106,10 +106,10 @@ public class PlayerStats : MonoBehaviour
         if (limbHealth <= 0)
         {
             limbHealth = 100;
-            limbs--;
-            if (limbs <= 0)
+            if (limbs > 1)
             {
-                Debug.Log("Player Died!");
+                limbs--;
+                nextLimbCost.text = "Flesh for next limb: " + GetCurrentLimbCost();
             }
         }
     }
